@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/app_theme.dart';
 
 class LandingSection extends StatelessWidget {
@@ -17,18 +18,18 @@ class LandingSection extends StatelessWidget {
               SizedBox(width: size.width * 0.20),
               RichText(
                   text: TextSpan(
-                      text: "Xavier ",
+                      text: AppIntl.of(context).firstname,
                       style: TextStyle(color: AppTheme.white, fontSize: 40),
                       children: <TextSpan>[
                     TextSpan(
-                        text: "Chrétien",
+                        text: AppIntl.of(context).lastname,
                         style:
                             TextStyle(color: AppTheme.orangeRed, fontSize: 40)),
                     TextSpan(
-                        text: "\nÉtudiant en ",
+                        text: "\n${AppIntl.of(context).landing_subtitle_part_1}",
                         style: TextStyle(color: AppTheme.white, fontSize: 40)),
                     TextSpan(
-                        text: "génie logiciel",
+                        text: AppIntl.of(context).landing_subtitle_part_2,
                         style:
                             TextStyle(color: AppTheme.orangeRed, fontSize: 40))
                   ]))
