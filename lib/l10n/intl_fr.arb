@@ -3,5 +3,7 @@
   "lastname": "Chrétien",
 
   "landing_subtitle_part_1": "Étudiant en ",
-  "landing_subtitle_part_2": "génie logiciel"
+  "landing_subtitle_part_2": "génie logiciel",
+
+  "projects_title": "Mes projets."
 }
