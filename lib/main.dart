@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio/sections/landing.dart';
 import 'package:portfolio/sections/projects.dart';
+import 'package:portfolio/utils/app_theme.dart';
 
 import 'generated/l10n.dart';
 
@@ -15,12 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Xavier Chrétien',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: 'JetBrainsMono',
-
-      ),
+      theme: AppTheme.theme,
       localizationsDelegates: const [
         AppIntl.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -35,14 +31,15 @@ class MyApp extends StatelessWidget {
 class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print('hhhhs');
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Wrap(
-          children: [
-            LandingSection(),
-            ProjectsSection()
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Wrap(
+            children: [
+              LandingSection(),
+              ProjectsSection()
+            ],
+          ),
         ),
       ),
     );
