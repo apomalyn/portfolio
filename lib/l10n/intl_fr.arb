@@ -1,9 +1,20 @@
 {
   "firstname": "Xavier ",
   "lastname": "Chrétien",
-
   "landing_subtitle_part_1": "Étudiant en ",
   "landing_subtitle_part_2": "génie logiciel",
 
-  "projects_title": "Mes projets."
+  "github_tooltip": "Voir le projet sur Github.",
+  "link_default_tooltip": "Voir le site du projet",
+
+  "projects_title": "Mes projets.",
+  "project_status_in_progress": "En cours",
+  "project_status_done": "Fini",
+
+  "project_etsmobile_title": "ÉTSMobile",
+  "project_etsmobile_description": "ÉTSMobile est l'application développé par et pour les étudiants de l'École de Technologie Supérieure. J'ai eu la chance de participer à la quatrième version de l'application.",
+
+  "project_cinet_title": "Cinet",
+  "project_cinet_description": "Cinet est un projet mélangeant matériel et logiciel pour le bien du cinéma amateur. L'objectif est de concevoir des accessoires de cinéma électronique facilement controllable et personnalisable.",
+  "project_cinet_tooltip": "Voir le premier accesoire en image!"
 }

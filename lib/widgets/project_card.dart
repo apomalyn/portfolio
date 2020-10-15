@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/models/project_data.dart';
+import 'package:portfolio/models/project_data.dart';
 import 'package:portfolio/generated/l10n.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -40,12 +40,11 @@ class _ProjectCardState extends State<ProjectCard> {
           onHover: (value) {
             setState(() {
               this._isHover = value;
-              print(_isHover);
             });
           },
           child: SizedBox(
               height: 250,
-              width: 500,
+              width: 450,
               child: Stack(children: [
                 AnimatedOpacity(
                     opacity: this._isHover ? 0.0 : 1.0,
@@ -93,21 +92,48 @@ class _ProjectCardState extends State<ProjectCard> {
             ),
             Align(
               alignment: Alignment.center,
-              child: Text(widget.projectData.descriptionIntl,
-                  style: TextStyle(
-                      color: widget.isTextWhite ? Colors.white : Colors.black)),
-            ),
-            Align(
-              alignment: Alignment.bottomRight,
               child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: IconButton(
-                  icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
-                  onPressed: () => print("${widget.projectData.name} tapped!"),
-                ),
+                padding: const EdgeInsets.all(20.0),
+                child: Text(widget.projectData.descriptionIntl,
+                    style: TextStyle(
+                        color:
+                            widget.isTextWhite ? Colors.white : Colors.black)),
               ),
-            )
+            ),
+            _buildActionButtons()
           ],
         ),
       );
+
+  Widget _buildActionButtons() {
+    List<Widget> actions = [];
+
+    if (widget.projectData.otherUrl.isNotEmpty) {
+      actions.add(IconButton(
+          icon: widget.projectData.otherUrlIcon,
+          tooltip: widget.projectData.otherUrlTooltip,
+          onPressed: () => print("${widget.projectData.name} other link tapped!")));
+    }
+
+    if (widget.projectData.githubUrl.isNotEmpty) {
+      actions.add(IconButton(
+        icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
+        tooltip: AppIntl.current.github_tooltip,
+        onPressed: () => print("${widget.projectData.name} github tapped!"),
+      ));
+    }
+
+    print("${widget.projectData.name} -- ${actions.length}");
+
+    return Align(
+      alignment: Alignment.bottomRight,
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: actions,
+        ),
+      ),
+    );
+  }
 }
