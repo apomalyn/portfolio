@@ -1,0 +1,20 @@
+{
+  "firstname": "Xavier ",
+  "lastname": "Chrétien",
+  "landing_subtitle_part_1": "Student in ",
+  "landing_subtitle_part_2": "software engineering",
+
+  "github_tooltip": "See the project of Github",
+  "link_default_tooltip": "See the project website",
+
+  "projects_title": "My projects.",
+  "project_status_in_progress": "In progress",
+  "project_status_done": "Done",
+
+  "project_etsmobile_title": "ÉTSMobile",
+  "project_etsmobile_description": "ÉTSMobile is an application developed by and for all students of the École de Technologie Supérieure. I had the chance to participate the architecture and the fourth version of this application.",
+
+  "project_cinet_title": "Cinet",
+  "project_cinet_description": "Cinet is a project mixing hardware and software for the good of amateur cinema. The main purpose is to offer electronic probes easily controllable and customisable.",
+  "project_cinet_tooltip": "See the first probe on video!"
+}
