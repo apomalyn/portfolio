@@ -16,6 +16,7 @@ List<ProjectData> get projectsData => [
       name: AppIntl.current.project_cinet_title,
       descriptionIntl: AppIntl.current.project_cinet_description,
       logoPath: "assets/logos/ets_white_logo.png",
+      githubUrl: "https://github.com/apomalyn/cinet",
       otherUrl: "https://www.facebook.com/laurence.sibelle.14/videos/800483494100525/",
       otherUrlIcon: Icon(Icons.movie_creation_outlined, color: Colors.white,),
       otherUrlTooltip: AppIntl.current.project_cinet_tooltip,

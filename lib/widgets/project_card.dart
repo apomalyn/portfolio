@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/project_data.dart';
 import 'package:portfolio/generated/l10n.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatefulWidget {
   final Color backgroundColor;
@@ -112,18 +113,27 @@ class _ProjectCardState extends State<ProjectCard> {
       actions.add(IconButton(
           icon: widget.projectData.otherUrlIcon,
           tooltip: widget.projectData.otherUrlTooltip,
-          onPressed: () => print("${widget.projectData.name} other link tapped!")));
+          onPressed: () async {
+            if (await canLaunch(widget.projectData.otherUrl)) {
+              await launch(widget.projectData.otherUrl);
+            } else {
+              throw 'Could not launch ${widget.projectData.otherUrl}';
+            }
+          }));
     }
 
     if (widget.projectData.githubUrl.isNotEmpty) {
       actions.add(IconButton(
         icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
         tooltip: AppIntl.current.github_tooltip,
-        onPressed: () => print("${widget.projectData.name} github tapped!"),
-      ));
+        onPressed: () async {
+          if (await canLaunch(widget.projectData.githubUrl)) {
+            await launch(widget.projectData.githubUrl);
+          } else {
+            throw 'Could not launch ${widget.projectData.githubUrl}';
+          }
+        }));
     }
-
-    print("${widget.projectData.name} -- ${actions.length}");
 
     return Align(
       alignment: Alignment.bottomRight,
