@@ -29,6 +29,7 @@ class AppTheme {
         headline4: TextStyle(color: lightBlack, fontSize: 34),
         headline5: TextStyle(color: lightBlack, fontSize: 24),
         headline6: TextStyle(color: lightBlack, fontSize: 20),
+        bodyText1: TextStyle(color: lightBlack, fontSize: 14, height: 1.75)
       )
   );
 
