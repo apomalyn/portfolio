@@ -22,7 +22,7 @@ class ProjectCard extends StatefulWidget {
 }
 
 class _ProjectCardState extends State<ProjectCard> {
-  bool _isHover = false;
+  bool _isHovered = false;
 
   final Duration hoverDuration = Duration(milliseconds: 250);
 
@@ -35,20 +35,15 @@ class _ProjectCardState extends State<ProjectCard> {
         semanticContainer: true,
         elevation: 5,
         margin: EdgeInsets.all(10),
-        child: InkWell(
-          onTap: () {},
-          splashColor: Colors.transparent,
-          onHover: (value) {
-            setState(() {
-              this._isHover = value;
-            });
-          },
+        child: MouseRegion(
+          onEnter: (e) => _mouseHover(true),
+          onExit: (e) => _mouseHover(false),
           child: SizedBox(
               height: 250,
               width: 450,
               child: Stack(children: [
                 AnimatedOpacity(
-                    opacity: this._isHover ? 0.0 : 1.0,
+                    opacity: this._isHovered ? 0.0 : 1.0,
                     duration: hoverDuration,
                     child: Stack(
                       children: [
@@ -76,7 +71,7 @@ class _ProjectCardState extends State<ProjectCard> {
       );
 
   Widget hovered() => AnimatedOpacity(
-        opacity: this._isHover ? 1.0 : 0.0,
+        opacity: this._isHovered ? 1.0 : 0.0,
         duration: hoverDuration,
         child: Stack(
           children: [
@@ -145,5 +140,11 @@ class _ProjectCardState extends State<ProjectCard> {
         ),
       ),
     );
+  }
+
+  void _mouseHover(bool hover) {
+    setState(() {
+      this._isHovered = hover;
+    });
   }
 }
