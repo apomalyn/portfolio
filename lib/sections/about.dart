@@ -40,7 +40,7 @@ class AboutSection extends StatelessWidget {
                               ? size.width * 0.25
                               : size.width * 0.8,
                           child: Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                              AppIntl.of(context).about_first_paragraph,
                               style: AppTheme.theme.textTheme.bodyText1
                                   .copyWith(color: AppTheme.white),
                               textAlign: TextAlign.left,
@@ -53,7 +53,7 @@ class AboutSection extends StatelessWidget {
                               ? size.width * 0.25
                               : size.width * 0.8,
                           child: Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                              AppIntl.of(context).about_second_paragraph,
                               style: AppTheme.theme.textTheme.bodyText1
                                   .copyWith(color: AppTheme.white),
                               textAlign: TextAlign.left,
