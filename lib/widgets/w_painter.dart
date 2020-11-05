@@ -15,7 +15,6 @@ class W extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
       width: this.width,
       height: this.width,
       child: CustomPaint(
@@ -62,21 +61,16 @@ class WPainter extends CustomPainter {
 
     path.close();
 
-
     // Rotate the canvas around the center.
     canvas.translate(center.dx, center.dy);
     canvas.rotate(math.pi * radians);
     canvas.translate(-center.dx, -center.dy);
 
     // Draw the W.
+    canvas.drawShadow(path, Colors.black, 5, false);
     canvas.drawPath(path, _paint);
   }
 
-  // Since this Sky painter has no fields, it always paints
-  // the same thing and semantics information is the same.
-  // Therefore we return false here. If we had fields (set
-  // from the constructor) then we would return true if any
-  // of them differed from the same fields on the oldDelegate.
   @override
   bool shouldRepaint(WPainter oldDelegate) => false;
   @override
