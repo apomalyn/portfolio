@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:portfolio/sections/about.dart';
 import 'package:portfolio/sections/landing.dart';
 import 'package:portfolio/sections/projects.dart';
 import 'package:portfolio/utils/app_theme.dart';
@@ -38,7 +39,8 @@ class Portfolio extends StatelessWidget {
           child: Wrap(
             children: [
               LandingSection(),
-              ProjectsSection()
+              ProjectsSection(),
+              AboutSection()
             ],
           ),
         ),
