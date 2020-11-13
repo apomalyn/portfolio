@@ -87,6 +87,20 @@ flutter:
         - asset: fonts/JetBrainsMono/JetBrainsMono-Italic.ttf
           weight: 400
           style: italic
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: fonts/Montserrat/Montserrat-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: fonts/Montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: fonts/Montserrat/Montserrat-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/Montserrat/Montserrat-Regular.ttf
+          weight: 400
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

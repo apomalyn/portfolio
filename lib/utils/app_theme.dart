@@ -21,15 +21,14 @@ class AppTheme {
   static ThemeData theme = ThemeData(
       primarySwatch: Colors.blue,
       visualDensity: VisualDensity.adaptivePlatformDensity,
-      fontFamily: 'JetBrainsMono',
       textTheme: TextTheme(
-        headline1: TextStyle(color: lightBlack, fontSize: 96),
-        headline2: TextStyle(color: lightBlack, fontSize: 60),
-        headline3: TextStyle(color: lightBlack, fontSize: 48),
-        headline4: TextStyle(color: lightBlack, fontSize: 34),
-        headline5: TextStyle(color: lightBlack, fontSize: 24),
-        headline6: TextStyle(color: lightBlack, fontSize: 20),
-        bodyText1: TextStyle(color: lightBlack, fontSize: 14, height: 1.75)
+        headline1: TextStyle(color: lightBlack, fontSize: 96, fontFamily: 'JetBrainsMono'),
+        headline2: TextStyle(color: lightBlack, fontSize: 60, fontFamily: 'JetBrainsMono'),
+        headline3: TextStyle(color: lightBlack, fontSize: 48, fontFamily: 'JetBrainsMono'),
+        headline4: TextStyle(color: lightBlack, fontSize: 34, fontFamily: 'JetBrainsMono'),
+        headline5: TextStyle(color: lightBlack, fontSize: 24, fontFamily: 'JetBrainsMono'),
+        headline6: TextStyle(color: lightBlack, fontSize: 20, fontFamily: 'JetBrainsMono'),
+        bodyText1: TextStyle(color: lightBlack, fontSize: 14, height: 1.75, fontFamily: 'Montserrat')
       )
   );
 
@@ -44,7 +43,7 @@ class AppTheme {
   EdgeInsets get sectionSpacing {
 
     //if (data.size.width > 950) {
-      return EdgeInsets.fromLTRB(20, largeVerticalSpacing, 20, largeVerticalSpacing);
+      return EdgeInsets.fromLTRB(largeHorizontalSpacing, largeVerticalSpacing, largeHorizontalSpacing, largeVerticalSpacing);
     //}
 
     // if (data.size.width > 600) {
@@ -59,4 +58,10 @@ class AppTheme {
   double get mediumVerticalSpacing => _size.height * 0.05;
 
   double get smallVerticalSpacing => _size.height * 0.03;
+
+  double get largeHorizontalSpacing => _size.width * 0.15;
+
+  double get mediumHorizontalSpacing => _size.width * 0.05;
+
+  double get smallHorizontalSpacing => _size.width * 0.03;
 }
