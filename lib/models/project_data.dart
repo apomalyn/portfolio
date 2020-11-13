@@ -5,7 +5,6 @@ class ProjectData {
   final String name;
 
   /// Description of the project
-  /// Intl key
   final String descriptionIntl;
 
   /// Url of the github project if available
@@ -23,6 +22,7 @@ class ProjectData {
   /// Url of the logo
   final String logoPath;
 
+  /// Background color of the card
   final Color backgroundColor;
 
   ProjectData(

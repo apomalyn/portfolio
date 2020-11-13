@@ -7,6 +7,9 @@
   "github_tooltip": "Voir le projet sur Github.",
   "link_default_tooltip": "Voir le site du projet",
 
+  "see_more": "Voir plus",
+  "see_less": "Voir moins",
+
   "projects_title": "Mes projets.",
   "project_status_in_progress": "En cours",
   "project_status_done": "Fini",
@@ -19,5 +22,14 @@
   "project_cinet_tooltip": "Voir le premier accesoire en image!",
 
   "about_first_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-  "about_second_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+  "about_second_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+
+  "volunteer_title": "Mes implications.",
+
+  "volunteer_dsc_title": "Student Lead 2019-2020",
+  "volunteer_dsc_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+
+  "volunteer_applets_title": "Capitaine",
+  "volunteer_applets_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
 }
