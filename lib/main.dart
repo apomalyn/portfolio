@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio/sections/about.dart';
 import 'package:portfolio/sections/landing.dart';
 import 'package:portfolio/sections/projects.dart';
+import 'package:portfolio/sections/volunteer_experiences.dart';
 import 'package:portfolio/utils/app_theme.dart';
 
 import 'generated/l10n.dart';
@@ -40,7 +41,8 @@ class Portfolio extends StatelessWidget {
             children: [
               LandingSection(),
               ProjectsSection(),
-              AboutSection()
+              AboutSection(),
+              VolunteerExperiencesSection()
             ],
           ),
         ),
