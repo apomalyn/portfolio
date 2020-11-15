@@ -4,6 +4,9 @@ class VolunteerData {
   /// Path of the logo in the asset
   final String logoPath;
 
+  /// Semantics label corresponding to the logo (pointed with [logoPath])
+  final String semanticsLabel;
+
   /// Role as a volunteer
   final String role;
 
@@ -15,6 +18,7 @@ class VolunteerData {
 
   VolunteerData(
       {@required this.logoPath,
+      @required this.semanticsLabel,
       @required this.role,
       @required this.details,
       this.url});

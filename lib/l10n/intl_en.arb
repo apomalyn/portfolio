@@ -28,7 +28,9 @@
 
   "volunteer_dsc_title": "Student Lead 2019-2020",
   "volunteer_dsc_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_dsc_semanticsImageLabel": "Logo of the Developer Student Club (DSC) program.",
 
   "volunteer_applets_title": "President",
-  "volunteer_applets_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  "volunteer_applets_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_applets_semanticsImageLabel": "Logo of the scientific club Applets (written App|ETS)"
 }
