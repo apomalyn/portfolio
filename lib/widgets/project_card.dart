@@ -49,7 +49,7 @@ class _ProjectCardState extends State<ProjectCard> {
                       children: [
                         Align(
                           alignment: Alignment.center,
-                          child: Image.asset(widget.projectData.logoPath),
+                          child: Padding(padding: EdgeInsets.all(25),child: Image.asset(widget.projectData.logoPath)),
                         ),
                         Align(
                           alignment: Alignment.bottomRight,

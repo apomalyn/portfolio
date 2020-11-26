@@ -13,6 +13,7 @@ class ProjectsSection extends StatelessWidget {
 
     return Container(
       width: size.width,
+      color: AppTheme.white,
       child: Padding(
         padding: AppTheme.instance.sectionSpacing,
         child: Center(
