@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 
 class AppTheme {
-
   static AppTheme _instance;
 
   static AppTheme get instance {
-    if(_instance == null) {
+    if (_instance == null) {
       _instance = AppTheme();
     }
     return _instance;
@@ -19,31 +17,37 @@ class AppTheme {
   static const Color orangeRed = Color(0xffe95527);
 
   static ThemeData theme = ThemeData(
-      primarySwatch: Colors.blue,
+      backgroundColor: lightBlack,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
-        headline1: TextStyle(color: lightBlack, fontSize: 96, fontFamily: 'JetBrainsMono'),
-        headline2: TextStyle(color: lightBlack, fontSize: 60, fontFamily: 'JetBrainsMono'),
-        headline3: TextStyle(color: lightBlack, fontSize: 48, fontFamily: 'JetBrainsMono'),
-        headline4: TextStyle(color: lightBlack, fontSize: 34, fontFamily: 'JetBrainsMono'),
-        headline5: TextStyle(color: lightBlack, fontSize: 24, fontFamily: 'JetBrainsMono'),
-        headline6: TextStyle(color: lightBlack, fontSize: 20, fontFamily: 'JetBrainsMono'),
-        bodyText1: TextStyle(color: lightBlack, fontSize: 14, height: 1.75, fontFamily: 'Montserrat')
-      )
-  );
+          headline1: TextStyle(
+              color: lightBlack, fontSize: 96, fontFamily: 'JetBrainsMono'),
+          headline2: TextStyle(
+              color: lightBlack, fontSize: 60, fontFamily: 'JetBrainsMono'),
+          headline3: TextStyle(
+              color: lightBlack, fontSize: 48, fontFamily: 'JetBrainsMono'),
+          headline4: TextStyle(
+              color: lightBlack, fontSize: 34, fontFamily: 'JetBrainsMono'),
+          headline5: TextStyle(
+              color: lightBlack, fontSize: 24, fontFamily: 'JetBrainsMono'),
+          headline6: TextStyle(
+              color: lightBlack, fontSize: 20, fontFamily: 'JetBrainsMono'),
+          bodyText1: TextStyle(
+              color: lightBlack,
+              fontSize: 14,
+              height: 1.75,
+              fontFamily: 'Montserrat')));
 
   Size _size;
-
-
 
   void init(MediaQueryData data) {
     _size = data.size;
   }
 
   EdgeInsets get sectionSpacing {
-
     //if (data.size.width > 950) {
-      return EdgeInsets.fromLTRB(largeHorizontalSpacing, largeVerticalSpacing, largeHorizontalSpacing, largeVerticalSpacing);
+    return EdgeInsets.fromLTRB(largeHorizontalSpacing, largeVerticalSpacing,
+        largeHorizontalSpacing, largeVerticalSpacing);
     //}
 
     // if (data.size.width > 600) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/app_theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Vertical space between the elements of the card.
@@ -35,15 +36,17 @@ class CollapsableCard extends StatefulWidget {
   _CollapsableCardState createState() => _CollapsableCardState();
 }
 
-class _CollapsableCardState extends State<CollapsableCard>
-    with TickerProviderStateMixin<CollapsableCard> {
+class _CollapsableCardState extends State<CollapsableCard> {
   bool _isExpanded = false;
+
+  bool _arrowIsHovered = false;
 
   final Duration _animationDuration = const Duration(milliseconds: 300);
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 5,
       margin: EdgeInsets.all(10),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -58,7 +61,7 @@ class _CollapsableCardState extends State<CollapsableCard>
             children: [
               const SizedBox(height: _verticalSpace),
               InkWell(
-                onTap: widget.url != null ?_handleImageTap:null,
+                onTap: widget.url != null ? _handleImageTap : null,
                 hoverColor: Colors.transparent,
                 child: Container(
                     width: 250,
@@ -83,10 +86,19 @@ class _CollapsableCardState extends State<CollapsableCard>
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: InkWell(
+                    hoverColor: Colors.transparent,
                     onTap: _handleTap,
-                    child: Icon(_isExpanded
-                        ? Icons.keyboard_arrow_up_outlined
-                        : Icons.keyboard_arrow_down_outlined),
+                    onHover: (value) {
+                      setState(() {
+                        _arrowIsHovered = value;
+                      });
+                    },
+                    child: Icon(
+                      _isExpanded
+                          ? Icons.keyboard_arrow_up_outlined
+                          : Icons.keyboard_arrow_down_outlined,
+                      color: _arrowIsHovered ? AppTheme.orange : Colors.black,
+                    ),
                   ),
                 ),
               )
@@ -104,7 +116,7 @@ class _CollapsableCardState extends State<CollapsableCard>
   }
 
   void _handleImageTap() async {
-    if(widget.url != null) {
+    if (widget.url != null) {
       if (await canLaunch(widget.url)) {
         await launch(widget.url);
       } else {
