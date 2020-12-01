@@ -3,10 +3,11 @@ import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/app_theme.dart';
 
 class LandingSection extends StatelessWidget {
+  final TextStyle _titleWhiteStyle =
+      AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.white);
 
-  final TextStyle _titleWhiteStyle = AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.white);
-
-  final TextStyle _titleOrangeStyle = AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.orangeRed);
+  final TextStyle _titleOrangeStyle =
+      AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.orangeRed);
 
   @override
   Widget build(BuildContext context) {
@@ -15,31 +16,42 @@ class LandingSection extends StatelessWidget {
     return Container(
       height: size.height,
       width: size.width,
-      decoration: const BoxDecoration(color: AppTheme.lightBlack),
-      child: Stack(children: <Widget>[
-        Center(
-          child: Row(
+      color: AppTheme.lightBlack,
+      child: Padding(
+        padding: AppTheme.instance.sectionSpacing,
+        child: Stack(children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(width: size.width * 0.20),
-              RichText(
-                  text: TextSpan(
-                      text: AppIntl.of(context).firstname,
-                      style: _titleWhiteStyle,
-                      children: <TextSpan>[
-                    TextSpan(
-                        text: AppIntl.of(context).lastname,
-                        style: _titleOrangeStyle),
-                    TextSpan(
-                        text: "\n${AppIntl.of(context).landing_subtitle_part_1}",
-                        style: _titleWhiteStyle),
-                    TextSpan(
-                        text: AppIntl.of(context).landing_subtitle_part_2,
-                        style: _titleOrangeStyle)
-                  ]))
+              Flexible(
+                child: RichText(
+                    softWrap: true,
+                    text: TextSpan(
+                        text: "${AppIntl.of(context).firstname} ",
+                        style: _titleWhiteStyle,
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: AppIntl.of(context).lastname,
+                              style: _titleOrangeStyle)
+                        ])),
+              ),
+              Flexible(
+                child: RichText(
+                    text: TextSpan(
+                        text: AppIntl.of(context).landing_subtitle_part_1,
+                        children: <TextSpan>[
+                          TextSpan(
+                              text:
+                                  AppIntl.of(context).landing_subtitle_part_2,
+                              style: _titleOrangeStyle)
+                        ],
+                        style: _titleWhiteStyle)),
+              )
             ],
           ),
-        ),
-      ]),
+        ]),
+      ),
     );
   }
 }
