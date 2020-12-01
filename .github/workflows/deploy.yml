@@ -19,6 +19,8 @@ jobs:
           channel: 'beta'
       - name: Get packages from pub
         run: flutter pub get
+      - name: Generate l10n classes
+        run: flutter pub run intl_utils:generate
       - name: Enable flutter web
         run: flutter config --enable-web
       - name: Build web app
