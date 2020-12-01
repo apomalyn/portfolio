@@ -16,19 +16,19 @@ class ProjectsSection extends StatelessWidget {
       color: AppTheme.white,
       child: Padding(
         padding: AppTheme.instance.sectionSpacing,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(AppIntl.of(context).projects_title, style: AppTheme.theme.textTheme.headline4),
-              SizedBox(height: AppTheme.instance.largeVerticalSpacing),
-              Wrap(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(AppIntl.of(context).projects_title, style: AppTheme.theme.textTheme.headline4),
+            SizedBox(height: AppTheme.instance.largeVerticalSpacing),
+            Center(
+              child: Wrap(
                 spacing: 50,
                 children: _buildProjectCards(projectsData),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         )
       ),
     );

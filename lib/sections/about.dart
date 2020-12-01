@@ -11,7 +11,7 @@ class AboutSection extends StatelessWidget {
 
     return Container(
       width: size.width,
-      decoration: const BoxDecoration(color: AppTheme.lightBlack),
+      color: AppTheme.lightBlack,
       child: Padding(
           padding: AppTheme.instance.sectionSpacing,
           child: Center(
