@@ -1,5 +1,5 @@
 {
-  "firstname": "Xavier ",
+  "firstname": "Xavier",
   "lastname": "Chrétien",
   "landing_subtitle_part_1": "Étudiant en ",
   "landing_subtitle_part_2": "génie logiciel",
@@ -19,18 +19,18 @@
 
   "project_cinet_title": "Cinet",
   "project_cinet_description": "Cinet est un projet mélangeant matériel et logiciel pour le bien du cinéma amateur. L'objectif est de concevoir des accessoires de cinéma électronique facilement contrôlable et personnalisable.",
-  "project_cinet_tooltip": "Voir le premier accesoire en image!",
+  "project_cinet_tooltip": "Voir le premier accessoire en image!",
 
-  "about_first_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-  "about_second_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+  "about_first_paragraph": "J’aime le processus de conception. De la planification, à la conception, au développement, en passant par la coordination d’équipe, la concrétisation de la mise en production et le sentiment de toujours améliorer le produit. Curieux de tout et d'apprentissage, j’aime le voyage, l’aventure qui l’accompagne et les rencontres.",
+  "about_second_paragraph": "",
 
   "volunteer_title": "Mes implications.",
 
   "volunteer_dsc_title": "Student Lead 2019-2020",
-  "volunteer_dsc_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_dsc_details": "J'ai eu la chance d'être sélectionné par Google pour créer un chapitre de DSC dans mon université (ÉTS), en plus de m'avoir fait rencontrer des personnes formidables, cela m'a permis d'apprendre comment préparé et présenter une conférence technique ainsi que comment gérer une communauté. Je garde de cette expérience des superbes souvenirs même si je continue de penser que j'aurais pu mieux faire. Je me suis fait des amis et surtout un objectif: aider les communautés de développeurs que ce soit en donnant des conférences, des workshops ou bien en participant à l'organisation d'évènements similaires.",
   "volunteer_dsc_semanticsImageLabel": "Logo du programme Developer Student Club (DSC).",
 
-  "volunteer_applets_title": "Capitaine",
-  "volunteer_applets_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_applets_title": "Ancien Capitaine",
+  "volunteer_applets_details": "App|ETS est un club scientifique orienté sur l'ingénierie mobile, j'ai eu la chance, entre autre, d'être le concepteur, l'architecte et gestionnaire de projet pour la réécriture en Flutter d'ÉTSMobile (v4.0). Ce club m'a beaucoup apporté, j'ai pu améliorer mon leadership, mettre en place une culture organisationnelle, être l'intermédiaire entre les besoins de l'université, ceux des élèves (consommateurs de l'application) et le club, mais surtout cela m'a permis de mûrir en tant que personne. Cette expérience aura été plus que marquante et je serais à jamais reconnaissant envers les membres de ce club.",
   "volunteer_applets_semanticsImageLabel": "Logo du club scientifique Applets (écrit App|ETS)"
 }

@@ -1,5 +1,5 @@
 {
-  "firstname": "Xavier ",
+  "firstname": "Xavier",
   "lastname": "Chrétien",
   "landing_subtitle_part_1": "Student in ",
   "landing_subtitle_part_2": "software engineering",
@@ -21,16 +21,16 @@
   "project_cinet_description": "Cinet is a project mixing hardware and software for the good of amateur cinema. The main purpose is to offer electronic probes easily controllable and customisable.",
   "project_cinet_tooltip": "See the first probe on video!",
 
-  "about_first_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-  "about_second_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+  "about_first_paragraph": "I love the design process. From planning, to design, to development, through team coordination, the realization of the release and the feeling of always improving the product. Curious about everything and about learning, I love travel, the adventure that accompanies it and meeting people.",
+  "about_second_paragraph": "",
 
   "volunteer_title": "My volunteer experiences.",
 
   "volunteer_dsc_title": "Student Lead 2019-2020",
-  "volunteer_dsc_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_dsc_details": "I was lucky enough to be selected by Google to create a DSC chapter in my university (ÉTS), in addition to having introduce me to great people, it allowed me to learn how to prepare and present a technical talk as well as how to manage a community. I keep wonderful memories of this experience even if I think I could have done better. I've made friends and given me a goal: to help developer communities whether by giving tech talks, workshop or by participating in the organization of similar events.",
   "volunteer_dsc_semanticsImageLabel": "Logo of the Developer Student Club (DSC) program.",
 
   "volunteer_applets_title": "President",
-  "volunteer_applets_details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "volunteer_applets_details": "App|ETS is a scientific student club focused on mobile engineering, I had the chance, among other things, to be the designer, architect and project manager of the rewrite (and adding new features) in Flutter of ÉTSMobile (v4.0). This club brought me a lot, I was able to improve my leadership, set up a organizational culture, be the intermediary between the needs of the university, those of the students and the club, but above all, it allowed me to mature as a person. This experience will have been more than memorable and I will be forever grateful to the members of this club.",
   "volunteer_applets_semanticsImageLabel": "Logo of the scientific club Applets (written App|ETS)"
 }
