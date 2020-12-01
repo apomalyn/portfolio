@@ -23,6 +23,8 @@ jobs:
         run: flutter pub run intl_utils:generate
       - name: Enable flutter web
         run: flutter config --enable-web
+      - name: test
+        run: ls -ali
       - name: Build web app
         run: flutter build web
       - name: Publish to Github pages
