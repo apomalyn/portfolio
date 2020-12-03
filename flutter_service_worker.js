@@ -4,9 +4,10 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "426313f2f3133c2f20415344c4a22df3",
+"favicon.ico": "85bb110ff5d8cbee2de5c21726f07f4c",
 "main.dart.js": "f1e6b634acd08065b1e3d3fd24f59b8f",
-"index.html": "0e887b5c57f295973e4caad185359a1d",
-"/": "0e887b5c57f295973e4caad185359a1d",
+"index.html": "c098f821a67a5ab85549e596d1f0e05f",
+"/": "c098f821a67a5ab85549e596d1f0e05f",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "assets/AssetManifest.json": "4605e624dc24832cec02ba2cc8483239",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
@@ -31,9 +32,12 @@ const RESOURCES = {
 "assets/assets/logos/ets_white_logo.png": "d8f260816275171056f980e75cb628e5",
 "assets/assets/images/picture_account.jpg": "661a397f0a3e086b6f6dbccf403d15d6",
 "assets/NOTICES": "adf9d789497a9fc3df0b2f6ddba2db7c",
-"manifest.json": "e4447f0c72a73673531c5a6862007cc5",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1"
+"manifest.json": "a13f141c9d6cd9aec9348eb44cb0836a",
+"icons/favicon-32x32.png": "ce429601060cf7c915c5836db1c779bb",
+"icons/apple-touch-icon.png": "5521a61dbf52d493a7666e0d4dcc650c",
+"icons/icon-192x192.png": "614eb6e81ffac4741e2fd885000ed604",
+"icons/favicon-16x16.png": "729fe19d0e2f43c20f142c1db38cdaad",
+"icons/icon-512x512.png": "b3e0725119385f8c137393088f8eed08"
 };
 
 // The application shell files that are downloaded before a service worker can
