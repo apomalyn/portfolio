@@ -31,7 +31,7 @@ class AboutSection extends StatelessWidget {
                         Text(
                             "${AppIntl.of(context).firstname} ${AppIntl.of(context).lastname}.",
                             textAlign: TextAlign.start,
-                            style: AppTheme.theme.textTheme.headline5
+                            style: AppTheme.theme.textTheme.headline2
                                 .copyWith(color: AppTheme.white)),
                         SizedBox(
                             height: AppTheme.instance.mediumVerticalSpacing),

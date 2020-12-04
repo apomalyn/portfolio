@@ -4,10 +4,10 @@ import 'package:portfolio/utils/app_theme.dart';
 
 class LandingSection extends StatelessWidget {
   final TextStyle _titleWhiteStyle =
-      AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.white);
+      AppTheme.theme.textTheme.headline1.copyWith(color: AppTheme.white);
 
   final TextStyle _titleOrangeStyle =
-      AppTheme.theme.textTheme.headline3.copyWith(color: AppTheme.orangeRed);
+      AppTheme.theme.textTheme.headline1.copyWith(color: AppTheme.orangeRed);
 
   @override
   Widget build(BuildContext context) {

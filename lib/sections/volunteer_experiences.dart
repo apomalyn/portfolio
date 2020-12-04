@@ -23,7 +23,7 @@ class VolunteerExperiencesSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(AppIntl.of(context).volunteer_title,
-                  style: AppTheme.theme.textTheme.headline4),
+                  style: AppTheme.theme.textTheme.headline2),
               SizedBox(height: AppTheme.instance.largeVerticalSpacing),
               Center(
                 child: Wrap(

@@ -22,17 +22,17 @@ class AppTheme {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           headline1: TextStyle(
-              color: lightBlack, fontSize: 96, fontFamily: 'JetBrainsMono'),
+              color: lightBlack, fontSize: 54, fontFamily: 'JetBrainsMono'),
           headline2: TextStyle(
-              color: lightBlack, fontSize: 60, fontFamily: 'JetBrainsMono'),
+              color: lightBlack, fontSize: 42, fontFamily: 'JetBrainsMono'),
           headline3: TextStyle(
-              color: lightBlack, fontSize: 48, fontFamily: 'JetBrainsMono'),
-          headline4: TextStyle(
               color: lightBlack, fontSize: 34, fontFamily: 'JetBrainsMono'),
-          headline5: TextStyle(
+          headline4: TextStyle(
               color: lightBlack, fontSize: 24, fontFamily: 'JetBrainsMono'),
-          headline6: TextStyle(
+          headline5: TextStyle(
               color: lightBlack, fontSize: 20, fontFamily: 'JetBrainsMono'),
+          headline6: TextStyle(
+              color: lightBlack, fontSize: 16, fontFamily: 'JetBrainsMono'),
           bodyText1: TextStyle(
               color: lightBlack,
               fontSize: 14,
