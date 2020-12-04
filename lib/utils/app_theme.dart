@@ -18,6 +18,7 @@ class AppTheme {
 
   static ThemeData theme = ThemeData(
       backgroundColor: lightBlack,
+      scaffoldBackgroundColor: lightBlack,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           headline1: TextStyle(
