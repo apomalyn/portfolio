@@ -22,9 +22,9 @@ class AppTheme {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           headline1: TextStyle(
-              color: lightBlack, fontSize: 54, fontFamily: 'JetBrainsMono'),
+              color: lightBlack, fontSize: 40, fontFamily: 'JetBrainsMono'),
           headline2: TextStyle(
-              color: lightBlack, fontSize: 42, fontFamily: 'JetBrainsMono'),
+              color: lightBlack, fontSize: 38, fontFamily: 'JetBrainsMono'),
           headline3: TextStyle(
               color: lightBlack, fontSize: 34, fontFamily: 'JetBrainsMono'),
           headline4: TextStyle(
@@ -45,17 +45,17 @@ class AppTheme {
     _size = data.size;
   }
 
-  EdgeInsets get sectionSpacing {
-    //if (data.size.width > 950) {
-    return EdgeInsets.fromLTRB(largeHorizontalSpacing, largeVerticalSpacing,
-        largeHorizontalSpacing, largeVerticalSpacing);
-    //}
+  bool get useMobileLayout {
+    print(_size.shortestSide);
+    return _size.shortestSide < 600;
+  }
 
-    // if (data.size.width > 600) {
-    //   return DeviceScreenType.Tablet;
-    // }
-    //
-    // return DeviceScreenType.Mobile;
+  EdgeInsets get sectionSpacing {
+    return EdgeInsets.fromLTRB(
+        largeHorizontalSpacing,
+        useMobileLayout ? smallVerticalSpacing : largeVerticalSpacing,
+        largeHorizontalSpacing,
+        largeVerticalSpacing);
   }
 
   double get largeVerticalSpacing => _size.height * 0.1;
@@ -64,7 +64,7 @@ class AppTheme {
 
   double get smallVerticalSpacing => _size.height * 0.03;
 
-  double get largeHorizontalSpacing => _size.width * 0.15;
+  double get largeHorizontalSpacing => _size.width * 0.1;
 
   double get mediumHorizontalSpacing => _size.width * 0.05;
 
