@@ -45,10 +45,7 @@ class AppTheme {
     _size = data.size;
   }
 
-  bool get useMobileLayout {
-    print(_size.shortestSide);
-    return _size.shortestSide < 600;
-  }
+  bool get useMobileLayout => _size.shortestSide < 600;
 
   EdgeInsets get sectionSpacing {
     return EdgeInsets.fromLTRB(

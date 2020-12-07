@@ -34,20 +34,22 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     AppTheme.instance.init(MediaQuery.of(context));
 
+    AppBar appBar = AppBar(backgroundColor: Colors.transparent,
+      elevation: 0,
+      centerTitle: true,
+      title: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Image.asset('assets/logos/fox.png', width: 24, height: 24),
+      ),
+    );
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Wrap(
             children: [
-              AppBar(backgroundColor: Colors.transparent,
-                elevation: 0,
-                centerTitle: true,
-                title: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('assets/logos/fox.png', width: 24, height: 24),
-                ),
-              ),
-              LandingSection(),
+              appBar,
+              LandingSection(appBarHeight: appBar.preferredSize.height),
               ProjectsSection(),
               AboutSection(),
               VolunteerExperiencesSection()
