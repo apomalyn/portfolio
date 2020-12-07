@@ -3,6 +3,7 @@
   "lastname": "Chrétien",
   "landing_subtitle_part_1": "Étudiant en ",
   "landing_subtitle_part_2": "génie logiciel",
+  "landing_scroll": "Défiler",
 
   "github_tooltip": "Voir le projet sur Github.",
   "link_default_tooltip": "Voir le site du projet",
@@ -21,7 +22,7 @@
   "project_cinet_description": "Cinet est un projet mélangeant matériel et logiciel pour le bien du cinéma amateur. L'objectif est de concevoir des accessoires de cinéma électronique facilement contrôlable et personnalisable.",
   "project_cinet_tooltip": "Voir le premier accessoire en image!",
 
-  "about_first_paragraph": "J’aime le processus de conception. De la planification, à la conception, au développement, en passant par la coordination d’équipe, la concrétisation de la mise en production et le sentiment de toujours améliorer le produit. Curieux de tout et d'apprentissage, j’aime le voyage, l’aventure qui l’accompagne et les rencontres.",
+  "about_first_paragraph": "J’aime le processus de conception. De la planification, à l'architecture, au développement, en passant par la coordination d’équipe, la concrétisation de la mise en production et le sentiment de toujours améliorer le produit. Curieux de tout et d'apprentissage, j’aime le voyage, l’aventure qui l’accompagne et les rencontres.",
   "about_second_paragraph": "",
 
   "volunteer_title": "Mes implications.",

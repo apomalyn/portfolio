@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/app_theme.dart';
 
 class ScrollDownAnimated extends StatefulWidget {
@@ -33,8 +34,8 @@ class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Scroll',
-                style: AppTheme.theme.textTheme.bodyText1
+            Text(AppIntl.of(context).landing_scroll,
+                style: AppTheme.instance.theme.textTheme.bodyText1
                     .copyWith(color: AppTheme.white)),
             SizedBox(height: AppTheme.instance.smallVerticalSpacing / 3),
             ConstrainedBox(
