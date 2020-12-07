@@ -16,7 +16,7 @@ class AppTheme {
   static const Color orange = Color(0xfff08122);
   static const Color orangeRed = Color(0xffe95527);
 
-  static ThemeData theme = ThemeData(
+  static ThemeData desktopTheme = ThemeData(
       backgroundColor: lightBlack,
       scaffoldBackgroundColor: lightBlack,
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -39,6 +39,27 @@ class AppTheme {
               height: 1.75,
               fontFamily: 'Montserrat')));
 
+  static ThemeData mobileTheme = desktopTheme.copyWith(
+      textTheme: TextTheme(
+          headline1: TextStyle(
+              color: lightBlack, fontSize: 30, fontFamily: 'JetBrainsMono'),
+          headline2: TextStyle(
+              color: lightBlack, fontSize: 28, fontFamily: 'JetBrainsMono'),
+          headline3: TextStyle(
+              color: lightBlack, fontSize: 24, fontFamily: 'JetBrainsMono'),
+          headline4: TextStyle(
+              color: lightBlack, fontSize: 20, fontFamily: 'JetBrainsMono'),
+          headline5: TextStyle(
+              color: lightBlack, fontSize: 18, fontFamily: 'JetBrainsMono'),
+          headline6: TextStyle(
+              color: lightBlack, fontSize: 16, fontFamily: 'JetBrainsMono'),
+          bodyText1: TextStyle(
+              color: lightBlack,
+              fontSize: 14,
+              height: 1.75,
+              fontFamily: 'Montserrat'))
+  );
+
   Size _size;
 
   void init(MediaQueryData data) {
@@ -46,6 +67,9 @@ class AppTheme {
   }
 
   bool get useMobileLayout => _size.shortestSide < 600;
+
+  /// Theme data for the application.
+  ThemeData get theme => useMobileLayout ? mobileTheme:desktopTheme;
 
   EdgeInsets get sectionSpacing {
     return EdgeInsets.fromLTRB(

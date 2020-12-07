@@ -4,11 +4,12 @@ import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/scroll_down_animated.dart';
 
 class LandingSection extends StatelessWidget {
-  final TextStyle _titleWhiteStyle =
-      AppTheme.theme.textTheme.headline1.copyWith(color: AppTheme.white);
+  final TextStyle _titleWhiteStyle = AppTheme.instance.theme.textTheme.headline1
+      .copyWith(color: AppTheme.white);
 
-  final TextStyle _titleOrangeStyle =
-      AppTheme.theme.textTheme.headline1.copyWith(color: AppTheme.orangeRed);
+  final TextStyle _titleOrangeStyle = AppTheme
+      .instance.theme.textTheme.headline1
+      .copyWith(color: AppTheme.orangeRed);
 
   /// Used to determine the exact height available for the section.
   final appBarHeight;
@@ -27,7 +28,8 @@ class LandingSection extends StatelessWidget {
       width: size.width,
       color: AppTheme.lightBlack,
       child: Padding(
-        padding: AppTheme.instance.sectionSpacing,
+        padding: AppTheme.instance.sectionSpacing
+            .copyWith(bottom: AppTheme.instance.smallVerticalSpacing),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -41,7 +43,9 @@ class LandingSection extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: AppTheme.instance.useMobileLayout
+                          ? CrossAxisAlignment.center
+                          : CrossAxisAlignment.start,
                       children: [
                         Flexible(
                           child: RichText(
@@ -65,8 +69,8 @@ class LandingSection extends StatelessWidget {
                                   : TextAlign.start,
                               softWrap: true,
                               text: TextSpan(
-                                  text:
-                                      AppIntl.of(context).landing_subtitle_part_1,
+                                  text: AppIntl.of(context)
+                                      .landing_subtitle_part_1,
                                   children: <TextSpan>[
                                     TextSpan(
                                         text: AppIntl.of(context)
@@ -86,8 +90,7 @@ class LandingSection extends StatelessWidget {
                     )
                   ]),
             ),
-            Positioned(
-                bottom: 0, child: ScrollDownAnimated())
+            Positioned(bottom: 0, child: ScrollDownAnimated())
           ],
         ),
         //   child: Column(

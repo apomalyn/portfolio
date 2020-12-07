@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Xavier Chrétien',
-      theme: AppTheme.theme,
+      theme: AppTheme.desktopTheme,
       localizationsDelegates: const [
         AppIntl.delegate,
         GlobalMaterialLocalizations.delegate,
