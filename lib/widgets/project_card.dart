@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/project_data.dart';
 import 'package:portfolio/generated/l10n.dart';
+import 'package:portfolio/utils/app_theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -35,38 +36,13 @@ class _ProjectCardState extends State<ProjectCard> {
         semanticContainer: true,
         elevation: 5,
         margin: EdgeInsets.all(10),
-        child: MouseRegion(
+        child: AppTheme.instance.useMobileLayout ? GestureDetector(
+          onTap: () => _mouseHover(!this._isHovered),
+          child: _buildCardContent(),
+        ):MouseRegion(
           onEnter: (e) => _mouseHover(true),
           onExit: (e) => _mouseHover(false),
-          child: SizedBox(
-              height: 250,
-              width: 450,
-              child: Stack(children: [
-                AnimatedOpacity(
-                    opacity: this._isHovered ? 0.0 : 1.0,
-                    duration: hoverDuration,
-                    child: Stack(
-                      children: [
-                        Align(
-                          alignment: Alignment.center,
-                          child: Padding(padding: EdgeInsets.all(25),child: Image.asset(widget.projectData.logoPath)),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Padding(
-                            padding: EdgeInsets.all(20.0),
-                            child: Text(widget.projectData.name,
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: widget.isTextWhite
-                                        ? Colors.white
-                                        : Colors.black)),
-                          ),
-                        )
-                      ],
-                    )),
-                hovered()
-              ])),
+          child: _buildCardContent()
         ),
       );
 
@@ -100,6 +76,36 @@ class _ProjectCardState extends State<ProjectCard> {
           ],
         ),
       );
+
+  Widget _buildCardContent() => SizedBox(
+      height: 250,
+      width: 450,
+      child: Stack(children: [
+        AnimatedOpacity(
+            opacity: this._isHovered ? 0.0 : 1.0,
+            duration: hoverDuration,
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(padding: EdgeInsets.all(25),child: Image.asset(widget.projectData.logoPath)),
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Text(widget.projectData.name,
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: widget.isTextWhite
+                                ? Colors.white
+                                : Colors.black)),
+                  ),
+                )
+              ],
+            )),
+        hovered()
+      ]));
 
   Widget _buildActionButtons() {
     List<Widget> actions = [];
