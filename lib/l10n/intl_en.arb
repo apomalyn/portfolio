@@ -3,6 +3,7 @@
   "lastname": "Chrétien",
   "landing_subtitle_part_1": "Student in ",
   "landing_subtitle_part_2": "software engineering",
+  "landing_scroll": "Scroll",
 
   "github_tooltip": "See the project of Github",
   "link_default_tooltip": "See the project website",
@@ -21,7 +22,7 @@
   "project_cinet_description": "Cinet is a project mixing hardware and software for the good of amateur cinema. The main purpose is to offer electronic probes easily controllable and customisable.",
   "project_cinet_tooltip": "See the first probe on video!",
 
-  "about_first_paragraph": "I love the design process. From planning, to design, to development, through team coordination, the realization of the release and the feeling of always improving the product. Curious about everything and about learning, I love travel, the adventure that accompanies it and meeting people.",
+  "about_first_paragraph": "I love the design process. From planning, to software architecture, to development, through team coordination, the realization of the release and the feeling of always improving the product. Curious about everything and about learning, I love travel, the adventure that accompanies it and meeting people.",
   "about_second_paragraph": "",
 
   "volunteer_title": "My volunteer experiences.",
