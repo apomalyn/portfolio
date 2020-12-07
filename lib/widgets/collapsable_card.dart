@@ -51,58 +51,68 @@ class _CollapsableCardState extends State<CollapsableCard> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 30, 30, 8),
-        child: Container(
-          width: 350,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: _verticalSpace),
-              InkWell(
-                onTap: widget.url != null ? _handleImageTap : null,
-                hoverColor: Colors.transparent,
-                child: Container(
-                    width: 250,
-                    height: 150,
-                    child: Image.asset(widget.image,
-                        semanticLabel: widget.semanticsImageLabel)),
-              ),
-              const SizedBox(height: _verticalSpace),
-              widget.title,
-              const SizedBox(height: _verticalSpace),
-              AnimatedContainer(
-                duration: _animationDuration,
-                //height: getHeight(), TODO find a way to determine the correct size of the collapsed and the expanded state
-                child: Text(
-                  widget.details,
-                  maxLines: _isExpanded ? 2 ^ 64 : widget.maxLines,
-                  overflow: TextOverflow.ellipsis,
+      child: InkWell(
+        hoverColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        onTap: _handleTap,
+        onHover: (value) {
+          setState(() {
+            _arrowIsHovered = value;
+          });
+        },
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 30, 30, 8),
+          child: Container(
+            width: 350,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: _verticalSpace),
+                InkWell(
+                  onTap: widget.url != null ? _handleImageTap : null,
+                  hoverColor: Colors.transparent,
+                  child: Container(
+                      width: 250,
+                      height: 150,
+                      child: Image.asset(widget.image,
+                          semanticLabel: widget.semanticsImageLabel)),
                 ),
-              ),
-              const SizedBox(height: _verticalSpace),
-              ClipRect(
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: InkWell(
-                    hoverColor: Colors.transparent,
-                    onTap: _handleTap,
-                    onHover: (value) {
-                      setState(() {
-                        _arrowIsHovered = value;
-                      });
-                    },
-                    child: Icon(
-                      _isExpanded
-                          ? Icons.keyboard_arrow_up_outlined
-                          : Icons.keyboard_arrow_down_outlined,
-                      color: _arrowIsHovered ? AppTheme.orange : Colors.black,
-                    ),
+                const SizedBox(height: _verticalSpace),
+                widget.title,
+                const SizedBox(height: _verticalSpace),
+                AnimatedContainer(
+                  duration: _animationDuration,
+                  //height: getHeight(), TODO find a way to determine the correct size of the collapsed and the expanded state
+                  child: Text(
+                    widget.details,
+                    maxLines: _isExpanded ? 2 ^ 64 : widget.maxLines,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
-              )
-            ],
+                const SizedBox(height: _verticalSpace),
+                ClipRect(
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: _handleTap,
+                      onHover: (value) {
+                        setState(() {
+                          _arrowIsHovered = value;
+                        });
+                      },
+                      child: Icon(
+                        _isExpanded
+                            ? Icons.keyboard_arrow_up_outlined
+                            : Icons.keyboard_arrow_down_outlined,
+                        color: _arrowIsHovered ? AppTheme.orange : Colors.black,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
