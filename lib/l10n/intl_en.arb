@@ -1,6 +1,8 @@
 {
   "firstname": "Xavier",
   "lastname": "Chrétien",
+  "other_lang": "Français",
+
   "landing_subtitle_part_1": "Student in ",
   "landing_subtitle_part_2": "software engineering",
   "landing_scroll": "Scroll",

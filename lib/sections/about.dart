@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/circle_image_animated.dart';
-import 'package:portfolio/widgets/w_painter.dart';
+import 'package:portfolio/widgets/embellishment/w_painter.dart';
 
 class AboutSection extends StatelessWidget {
   @override
