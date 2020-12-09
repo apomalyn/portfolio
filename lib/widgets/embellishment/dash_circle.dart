@@ -31,7 +31,6 @@ class DashedArc extends StatelessWidget {
   final Offset arcCenter;
 
   /// Draw a dashed arc, the offset is the center of the arc inside de canvas.
-  /// The 0 degree is
   const DashedArc(this.radius,
       {this.startAngle = 0.0,
         this.sweepAngle = 90,
