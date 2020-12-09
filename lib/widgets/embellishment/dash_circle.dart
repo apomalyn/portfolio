@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:math' as math;
 import 'package:portfolio/utils/app_theme.dart';
 
@@ -33,12 +32,12 @@ class DashedArc extends StatelessWidget {
   /// Draw a dashed arc, the offset is the center of the arc inside de canvas.
   const DashedArc(this.radius,
       {this.startAngle = 0.0,
-        this.sweepAngle = 90,
-        this.sizeDash = 10,
-        this.angleBetweenDash = 5,
-        this.strokeWidth,
-        this.arcCenter,
-        this.color = AppTheme.white})
+      this.sweepAngle = 90,
+      this.sizeDash = 10,
+      this.angleBetweenDash = 5,
+      this.strokeWidth,
+      this.arcCenter,
+      this.color = AppTheme.white})
       : assert(startAngle < 360 && startAngle >= 0),
         assert(sweepAngle < 360 && sweepAngle >= 0),
         assert(sizeDash <= 360 && sizeDash > 0),
@@ -88,36 +87,36 @@ class _DashedArcPainter extends CustomPainter {
   /// Center of the arc.
   final Offset arcCenter;
 
-  final Paint _paint = Paint()
-    ..style = PaintingStyle.stroke;
+  final Paint _paint = Paint()..style = PaintingStyle.stroke;
 
-  _DashedArcPainter({
-    @required this.radius,
-    double startAngle = 0.0,
-    double sweepAngle = 90.0,
-    double sizeDash = 10.0,
-    double angleBetweenDash = 5.0,
-    this.strokeWidth,
-    this.arcCenter = const Offset(0, 0),
-    this.color = AppTheme.white})
-      : this.startAngle = startAngle * (math.pi / 180),
-        this.sweepAngle = sweepAngle * (math.pi / 180),
-        this.sizeDash = sizeDash * (math.pi / 180),
-        this.angleBetweenDash = angleBetweenDash * (math.pi / 180);
+  static double degToRad(double degree) => degree * (math.pi / 180);
+
+  _DashedArcPainter(
+      {@required this.radius,
+      double startAngle = 0.0,
+      double sweepAngle = 90.0,
+      double sizeDash = 10.0,
+      double angleBetweenDash = 5.0,
+      this.strokeWidth,
+      this.arcCenter = const Offset(0, 0),
+      this.color = AppTheme.white})
+      : this.startAngle = degToRad(startAngle),
+        this.sweepAngle = degToRad(sweepAngle),
+        this.sizeDash = degToRad(sizeDash),
+        this.angleBetweenDash = degToRad(angleBetweenDash);
 
   @override
   void paint(Canvas canvas, Size size) {
     // Initialize
     _paint.color = this.color;
-    if(this.strokeWidth != null)
-      _paint.strokeWidth = this.strokeWidth;
+    if (this.strokeWidth != null) _paint.strokeWidth = this.strokeWidth;
 
-    var rect = Rect.fromCenter(center: arcCenter,
-        width: this.radius * 2,
-        height: this.radius * 2);
+    var rect = Rect.fromCenter(
+        center: arcCenter, width: this.radius * 2, height: this.radius * 2);
 
     var currentStartAngle = this.startAngle;
 
+    // Draw
     while (currentStartAngle - this.startAngle < this.sweepAngle) {
       // Draw the dash
       canvas.drawArc(rect, currentStartAngle, sizeDash, false, _paint);
@@ -126,8 +125,6 @@ class _DashedArcPainter extends CustomPainter {
       currentStartAngle += sizeDash + angleBetweenDash;
     }
   }
-
-  double radToDeg(double rad) => rad * (180/math.pi);
 
   @override
   bool shouldRepaint(_DashedArcPainter oldDelegate) => false;
