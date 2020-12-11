@@ -53,11 +53,11 @@ class Portfolio extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // ApplicationBar(),
-              // LandingSection(appBarHeight: kToolbarHeight),
-              // ProjectsSection(),
-              // AboutSection(),
-              // VolunteerExperiencesSection(),
+              ApplicationBar(),
+              LandingSection(appBarHeight: kToolbarHeight),
+              ProjectsSection(),
+              AboutSection(),
+              VolunteerExperiencesSection(),
               JourneySection(),
               Footer()
             ],
