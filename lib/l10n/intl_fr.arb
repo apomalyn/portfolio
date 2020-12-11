@@ -35,5 +35,9 @@
 
   "volunteer_applets_title": "Ancien Capitaine",
   "volunteer_applets_details": "App|ETS est un club scientifique orienté sur l'ingénierie mobile, j'ai eu la chance, entre autre, d'être le concepteur, l'architecte et gestionnaire de projet pour la réécriture en Flutter d'ÉTSMobile (v4.0). Ce club m'a beaucoup apporté, j'ai pu améliorer mon leadership, mettre en place une culture organisationnelle, être l'intermédiaire entre les besoins de l'université, ceux des élèves (consommateurs de l'application) et le club, mais surtout cela m'a permis de mûrir en tant que personne. Cette expérience aura été plus que marquante et je serais à jamais reconnaissant envers les membres de ce club.",
-  "volunteer_applets_semanticsImageLabel": "Logo du club scientifique Applets (écrit App|ETS)"
+  "volunteer_applets_semanticsImageLabel": "Logo du club scientifique Applets (écrit App|ETS)",
+
+  "journey_title": "Mon parcours.",
+  "journey_in_dev": "Cette section est actuellement en développement, en attendant, pour voir mon parcours vous pouvez visiter mon ",
+  "journey_in_dev_2": "profil LinkedIn."
 }

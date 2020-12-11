@@ -61,6 +61,7 @@ class AppTheme {
   );
 
   Size _size;
+  Size get size => _size;
 
   void init(MediaQueryData data) {
     _size = data.size;
