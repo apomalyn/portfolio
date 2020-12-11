@@ -1,7 +1,7 @@
 {
   "firstname": "Xavier",
   "lastname": "Chrétien",
-  "other_lang": "Français",
+  "other_lang": "FR",
 
   "landing_subtitle_part_1": "Student in ",
   "landing_subtitle_part_2": "software engineering",
@@ -35,5 +35,14 @@
 
   "volunteer_applets_title": "President",
   "volunteer_applets_details": "App|ETS is a scientific student club focused on mobile engineering, I had the chance, among other things, to be the designer, architect and project manager of the rewrite (and adding new features) in Flutter of ÉTSMobile (v4.0). This club brought me a lot, I was able to improve my leadership, set up a organizational culture, be the intermediary between the needs of the university, those of the students and the club, but above all, it allowed me to mature as a person. This experience will have been more than memorable and I will be forever grateful to the members of this club.",
-  "volunteer_applets_semanticsImageLabel": "Logo of the scientific club Applets (written App|ETS)"
+  "volunteer_applets_semanticsImageLabel": "Logo of the scientific club Applets (written App|ETS)",
+
+  "journey_title": "My journey.",
+  "journey_in_dev": "This section is currently in development, in the meantime, to see my journey you could head off my ",
+  "journey_in_dev_2": "LinkedIn profile.",
+
+  "footer_copyright": "\u00a9 Xavier Chrétien, 2020 - All Rights Reserved",
+  "footer_github_tooltip": "See my Github profile.",
+  "footer_linkedin_tooltip": "See my LinkedIn profile.",
+  "footer_twitter_tooltip": "See my Twitter account."
 }

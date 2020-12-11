@@ -17,8 +17,8 @@ class AppTheme {
   static const Color orangeRed = Color(0xffe95527);
 
   static ThemeData desktopTheme = ThemeData(
-      backgroundColor: lightBlack,
-      scaffoldBackgroundColor: lightBlack,
+      backgroundColor: white,
+      scaffoldBackgroundColor: white,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           headline1: TextStyle(
@@ -61,6 +61,7 @@ class AppTheme {
   );
 
   Size _size;
+  Size get size => _size;
 
   void init(MediaQueryData data) {
     _size = data.size;

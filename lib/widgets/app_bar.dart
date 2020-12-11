@@ -21,7 +21,7 @@ class _ApplicationBarState extends State<ApplicationBar> {
     }
 
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppTheme.lightBlack,
       elevation: 0,
       centerTitle: true,
       title: Padding(
