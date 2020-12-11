@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio/locator.dart';
 import 'package:portfolio/providers/locale_provider.dart';
 import 'package:portfolio/sections/about.dart';
+import 'package:portfolio/sections/footer.dart';
 import 'package:portfolio/sections/journey.dart';
 import 'package:portfolio/sections/landing.dart';
 import 'package:portfolio/sections/projects.dart';
@@ -52,12 +53,13 @@ class Portfolio extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ApplicationBar(),
-              LandingSection(appBarHeight: kToolbarHeight),
-              ProjectsSection(),
-              AboutSection(),
-              VolunteerExperiencesSection(),
-              JourneySection()
+              // ApplicationBar(),
+              // LandingSection(appBarHeight: kToolbarHeight),
+              // ProjectsSection(),
+              // AboutSection(),
+              // VolunteerExperiencesSection(),
+              JourneySection(),
+              Footer()
             ],
           ),
         ),

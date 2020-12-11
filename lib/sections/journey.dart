@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/urls.dart';
 import 'package:portfolio/generated/l10n.dart';
@@ -21,14 +22,19 @@ class JourneySection extends StatelessWidget {
               height: AppTheme.instance.largeVerticalSpacing,
             ),
             Center( // TEMPORARY
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(AppIntl.of(context).journey_in_dev),
-                  InkWell(
-                      onTap: _sendToLinkedIn,
-                      child: Text(AppIntl.of(context).journey_in_dev_2, style: AppTheme.instance.theme.textTheme.bodyText1.copyWith(color: AppTheme.gold),))
-                ],
+              child: RichText(
+                softWrap: true,
+                text: TextSpan(
+                  text: AppIntl.of(context).journey_in_dev,
+                  style: AppTheme.instance.theme.textTheme.bodyText1,
+                  children: [
+                    TextSpan(
+                      text: AppIntl.of(context).journey_in_dev_2,
+                      style: AppTheme.instance.theme.textTheme.bodyText1.copyWith(color: AppTheme.orangeRed),
+                      recognizer: TapGestureRecognizer()..onTap = _sendToLinkedIn
+                    )
+                  ]
+                ),
               ),
             ),
           ],

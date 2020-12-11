@@ -39,5 +39,10 @@
 
   "journey_title": "Mon parcours.",
   "journey_in_dev": "Cette section est actuellement en développement, en attendant, pour voir mon parcours vous pouvez visiter mon ",
-  "journey_in_dev_2": "profil LinkedIn."
+  "journey_in_dev_2": "profil LinkedIn.",
+
+  "footer_copyright": "\u00a9 Xavier Chrétien, 2020 - Tous droits réservés",
+  "footer_github_tooltip": "Voir mon profil Github.",
+  "footer_linkedin_tooltip": "Voir mon profil LinkedIn.",
+  "footer_twitter_tooltip": "Voir mon compte Twitter."
 }
