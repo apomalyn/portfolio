@@ -45,6 +45,33 @@
   "journey_in_dev": "This section is currently in development, in the meantime, to see my journey you could head off my ",
   "journey_in_dev_2": "LinkedIn profile.",
 
+  "journey_education": "Education",
+  "journey_experience": "Experience",
+
+  "journey_iut_title": "DUT in computer science, France",
+  "journey_iut_short_title": "IUT",
+  "journey_iut_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
+  "journey_cegep_title": "DEC in computer science, Matane",
+  "journey_cegep_short_title": "Cégep",
+  "journey_cegep_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
+  "journey_ets_title": "Bachelor of Software engineering, Montréal",
+  "journey_ets_short_title": "ÉTS",
+  "journey_ets_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
+  "journey_pvp_title": "Groupe PVP - PHP developer, Matane",
+  "journey_pvp_short_title": "PVP",
+  "journey_pvp_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
+  "journey_intact_title": "Intact Insurance - Web developer, Montréal",
+  "journey_intact_short_title": "Intact",
+  "journey_intact_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
+  "journey_nbc_title": "National Bank of Canada - SRE, Montréal",
+  "journey_nbc_short_title": "NBC",
+  "journey_nbc_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus erat a dolor placerat, sit amet molestie nulla hendrerit. Duis nulla erat, pellentesque ac ultricies at, tempor in nisl. Nullam eget consectetur sapien. Cras malesuada nisl quis nibh ullamcorper commodo. Fusce ut egestas orci, feugiat ullamcorper est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id nisi a justo facilisis fermentum sed sit amet orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce non ultrices diam. Donec eget urna rutrum, sodales metus sit amet, elementum nisl.",
+
   "footer_copyright": "\u00a9 Xavier Chrétien, 2020 - All Rights Reserved",
   "footer_github_tooltip": "See my Github profile.",
   "footer_linkedin_tooltip": "See my LinkedIn profile.",
