@@ -23,6 +23,7 @@ class TailSectionShape extends StatelessWidget {
   );
 }
 
+/// This painter will create a shape similar to tail of the fox logo.
 class _TailShapePainter extends CustomPainter {
 
   final Color color;

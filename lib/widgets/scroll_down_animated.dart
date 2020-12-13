@@ -17,8 +17,8 @@ class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
     super.initState();
 
     _controller =
-        AnimationController(duration: const Duration(seconds: 1), vsync: this)
-          ..repeat(reverse: true);
+    AnimationController(duration: const Duration(seconds: 1), vsync: this)
+      ..repeat(reverse: true);
 
     _animation = Tween(begin: 0.0, end: 15.0).animate(_controller);
   }
@@ -30,11 +30,14 @@ class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
   }
 
   @override
-  Widget build(BuildContext context) => Center(
+  Widget build(BuildContext context) =>
+      Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(AppIntl.of(context).landing_scroll,
+            Text(AppIntl
+                .of(context)
+                .landing_scroll,
                 style: AppTheme.instance.theme.textTheme.bodyText1
                     .copyWith(color: AppTheme.white)),
             SizedBox(height: AppTheme.instance.smallVerticalSpacing / 3),
