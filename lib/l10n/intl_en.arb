@@ -24,6 +24,10 @@
   "project_cinet_description": "Cinet is a project mixing hardware and software for the good of amateur cinema. The main purpose is to offer electronic probes easily controllable and customisable.",
   "project_cinet_tooltip": "See the first probe on video!",
 
+  "project_tragile_title": "Tragile",
+  "project_tragile_description": "Each pedestrian is unique, from colourblind to agoraphobic passing by deaf, blind, or have a stroller or luggage. Unfortunately, pedestrians are the most vulnerable users on the road. First prize of the HackQC 19, Tragile offers safer routes adapted to the user.",
+  "project_tragile_tooltip": "See the article published in the ÉTS journal.",
+
   "about_first_paragraph": "I love the design process. From planning, to software architecture, to development, through team coordination, the realization of the release and the feeling of always improving the product. Curious about everything and about learning, I love travel, the adventure that accompanies it and meeting people.",
   "about_second_paragraph": "",
 
