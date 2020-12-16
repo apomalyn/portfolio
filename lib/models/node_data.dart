@@ -32,6 +32,18 @@ class NodeData {
       @required this.shortTitle,
       @required this.description,
       this.isOnLeft = true})
-      : assert(basedOn != null && startingAt.isAfter(basedOn.startingAt)),
-        this.endingAt = endingAt ?? DateTime.now();
+      : this.endingAt = endingAt ?? DateTime.now();
+
+  /// Get the level of the node.
+  /// For example, if the node start from root, this function will return 0.
+  int get level {
+    if (this.isBasedOnRoot) return 0;
+    int level = 1;
+    var node = basedOn;
+    while (!node.isBasedOnRoot) {
+      level++;
+      node = node.basedOn;
+    }
+    return level;
+  }
 }

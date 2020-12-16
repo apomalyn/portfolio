@@ -2,10 +2,11 @@ import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/models/node_data.dart';
 
 List<NodeData> get nodes => [_iut, _cegep, _ets, _pvp, _intact, _nbc];
+//List<NodeData> get nodes => [_pvp];
 
 // Éducation
 NodeData _iut = NodeData(
-    startingAt: DateTime.parse("2015-09-01"),
+    startingAt: DateTime.parse("2015-03-01"),
     endingAt: DateTime.parse("2017-06-01"),
     title: AppIntl.current.journey_iut_title,
     shortTitle: AppIntl.current.journey_iut_short_title,
@@ -13,7 +14,7 @@ NodeData _iut = NodeData(
 
 NodeData _cegep = NodeData(
     basedOn: _iut,
-    startingAt: DateTime.parse("2017-01-01"),
+    startingAt: DateTime.parse("2017-01-18"),
     endingAt: DateTime.parse("2017-12-01"),
     title: AppIntl.current.journey_cegep_title,
     shortTitle: AppIntl.current.journey_cegep_short_title,
