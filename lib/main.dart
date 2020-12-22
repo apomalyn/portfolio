@@ -16,7 +16,6 @@ import 'generated/l10n.dart';
 
 void main() {
   setupLocator();
-
   runApp(MyApp());
 }
 

@@ -10,6 +10,7 @@ class TreePainter extends CustomPainter {
   /// Radius of the point representing the beginning and the end of a node on the main timeline
   final double _nodePointRadius = 7;
 
+  /// Width of the central timeline.
   final double _timelineWidth = 7;
 
   final Paint _paint = Paint()
@@ -17,11 +18,15 @@ class TreePainter extends CustomPainter {
     ..strokeCap = StrokeCap.round
     ..strokeJoin = StrokeJoin.bevel;
 
+  /// Contains all the data needed to draw the tree.
   final NodesTree tree;
 
-  Offset _curveDelta;
+  /// Space occupied vertically by a year.
+  final double yearSpace;
 
-  TreePainter({@required this.tree});
+  final Offset curveDelta;
+
+  TreePainter({@required this.tree, @required this.yearSpace, this.curveDelta});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -29,10 +34,6 @@ class TreePainter extends CustomPainter {
     _paint.color = AppTheme.lightBlack;
     _paint.style = PaintingStyle.stroke;
     _paint.strokeWidth = _timelineWidth;
-    var yearSpace = (size.height) / (tree.yearsTrimmed.length);
-    _curveDelta = AppTheme.instance.useMobileLayout ?
-        Offset(70, 50):Offset(max(size.width * 0.08, 75), 75);
-    print(size);
 
     // Draw middle separation
     canvas.drawLine(Offset(size.width / 2, 0.0),
@@ -45,7 +46,6 @@ class TreePainter extends CustomPainter {
     Offset currentYearOffset = Offset(size.width / 2, 0.0);
 
     tree.yearsTrimmed.forEach((key, year) {
-      print("***** Drawing $key - Starting at ${currentYearOffset.dy} ******");
       // Drawing year point
       _paint.color = AppTheme.orange;
       canvas.drawCircle(currentYearOffset, 10, _paint);
@@ -55,12 +55,10 @@ class TreePainter extends CustomPainter {
         Offset currentPosition =
             Offset(currentYearOffset.dx, currentYearOffset.dy);
         double changeOfSign = node.isOnLeft ? -1.0 : 1.0;
-        print("Drawing ${node.shortTitle}");
 
         if (year.beginThisYear(node)) {
-          currentPosition = currentPosition.translate(
-              changeOfSign * _curveDelta.dx * node.level,
-              yearSpace * monthInPerCent(node.startingAt));
+          currentPosition = node.startingPoint
+              .translate((-changeOfSign) * curveDelta.dx, curveDelta.dy);
 
           // Move to the correct position
           path.moveTo(currentPosition.dx, currentPosition.dy);
@@ -70,25 +68,23 @@ class TreePainter extends CustomPainter {
         } else {
           // Set the position if the node didn't start this year
           currentPosition = currentPosition.translate(
-              (node.level + 1) * (changeOfSign * _curveDelta.dx), 0.0);
+              (node.level + 1) * (changeOfSign * curveDelta.dx), 0.0);
           path.moveTo(currentPosition.dx, currentPosition.dy);
         }
 
         // Straight line
-        currentPosition = Offset(currentPosition.dx, currentYearOffset.dy + yearSpace);
+        currentPosition =
+            Offset(currentPosition.dx, currentYearOffset.dy + yearSpace);
         if (year.endThisYear(node)) {
-          currentPosition = currentPosition.translate(
-              0.0,
-              -(yearSpace * (1 - monthInPerCent(node.endingAt)) +
-                  _curveDelta.dy));
+          currentPosition = node.endingPoint.translate(0.0, -curveDelta.dy);
         }
         path.lineTo(currentPosition.dx, currentPosition.dy);
 
         // End of the node
         if (year.endThisYear(node)) {
           // Add end of the node and the point on the main line
-          _drawCurve(
-              path, currentPosition, node.isOnLeft, currentYearOffset, true, canvas);
+          _drawCurve(path, currentPosition, node.isOnLeft, currentYearOffset,
+              true, canvas);
         }
       }
       currentYearOffset = currentYearOffset.translate(0, yearSpace);
@@ -119,13 +115,13 @@ class TreePainter extends CustomPainter {
     if (toRoot) {
       path.cubicTo(
           currentPosition.dx,
-          currentPosition.dy + (_curveDelta.dy * 0.75),
+          currentPosition.dy + (curveDelta.dy * 0.75),
           rootPosition.dx,
-          currentPosition.dy + (_curveDelta.dy * 0.25),
+          currentPosition.dy + (curveDelta.dy * 0.25),
           rootPosition.dx,
-          currentPosition.dy + _curveDelta.dy);
+          currentPosition.dy + curveDelta.dy);
       canvas.drawCircle(
-          Offset(rootPosition.dx, currentPosition.dy + _curveDelta.dy),
+          Offset(rootPosition.dx, currentPosition.dy + curveDelta.dy),
           _nodePointRadius,
           _paint);
     } else {
@@ -134,16 +130,14 @@ class TreePainter extends CustomPainter {
       }
       path.cubicTo(
           currentPosition.dx,
-          currentPosition.dy + (_curveDelta.dy * 0.75),
-          currentPosition.dx + (changeOfSign * _curveDelta.dx),
-          currentPosition.dy + (_curveDelta.dy * 0.25),
-          currentPosition.dx + (changeOfSign * _curveDelta.dx),
-          currentPosition.dy + _curveDelta.dy);
+          currentPosition.dy + (curveDelta.dy * 0.75),
+          currentPosition.dx + (changeOfSign * curveDelta.dx),
+          currentPosition.dy + (curveDelta.dy * 0.25),
+          currentPosition.dx + (changeOfSign * curveDelta.dx),
+          currentPosition.dy + curveDelta.dy);
     }
 
     return currentPosition.translate(
-        changeOfSign * _curveDelta.dx, _curveDelta.dy);
+        changeOfSign * curveDelta.dx, curveDelta.dy);
   }
-
-  double monthInPerCent(DateTime date) => (date.month - 1) / 11;
 }

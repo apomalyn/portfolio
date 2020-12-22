@@ -24,6 +24,19 @@ class NodeData {
   /// Is situated on the left side of the tree.
   final bool isOnLeft;
 
+  Offset startingPoint;
+
+  Offset endingPoint;
+
+  /// Getting the middle
+  Offset get middlePoint {
+    if(startingPoint != null && endingPoint != null) {
+      return Offset((endingPoint.dx + startingPoint.dx) / 2,
+          (endingPoint.dy + startingPoint.dy) / 2);
+    }
+    return Offset.zero;
+  }
+
   NodeData(
       {this.basedOn,
       @required this.startingAt,
