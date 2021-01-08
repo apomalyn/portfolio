@@ -24,7 +24,7 @@ jobs:
       - name: Enable flutter web
         run: flutter config --enable-web
       - name: Build web app
-        run: flutter build web --web-renderer html 
+        run: flutter build web
       - name: Publish to Github pages
         uses: Cecilapp/GitHub-Pages-deploy@2.0.1
         env:
