@@ -47,8 +47,8 @@ const RESOURCES = {
 "assets/fonts/JetBrainsMono/JetBrainsMono-Italic.ttf": "7d9da1f97fc6201deb27133615288695",
 "assets/fonts/JetBrainsMono/JetBrainsMono-Medium-Italic.ttf": "032a3296ce3e14b00a6a32e23b3ce700",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"index.html": "f6d3f19bb27a0955364ef94acf05631d",
-"/": "f6d3f19bb27a0955364ef94acf05631d",
+"index.html": "0d02b7148c3f6e16b3227b325a3dc0b0",
+"/": "0d02b7148c3f6e16b3227b325a3dc0b0",
 "version.json": "426313f2f3133c2f20415344c4a22df3",
 "main.dart.js": "8e7c63a37ab4d751100e0b81582a74ed",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
