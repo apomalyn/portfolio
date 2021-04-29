@@ -55,6 +55,7 @@ class LandingSection extends StatelessWidget {
           child: Wrap(
               verticalDirection: VerticalDirection.up,
               crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: WrapAlignment.center,
               spacing: AppTheme.instance.smallHorizontalSpacing,
               runSpacing: AppTheme.instance.mediumVerticalSpacing,
               children: <Widget>[
@@ -99,6 +100,7 @@ class LandingSection extends StatelessWidget {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/banner.png', scale: 2.7)
                   ],
