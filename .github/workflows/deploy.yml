@@ -15,14 +15,9 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.24.x'
-          channel: 'beta'
+          flutter-version: '2.0.x'
       - name: Get packages from pub
         run: flutter pub get
-      - name: Generate l10n classes
-        run: flutter pub run intl_utils:generate
-      - name: Enable flutter web
-        run: flutter config --enable-web
       - name: Build web app
         run: flutter build web
       - name: Publish to Github pages

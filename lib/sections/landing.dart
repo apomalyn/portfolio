@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/embellishment/dash_circle.dart';
 import 'package:portfolio/widgets/embellishment/dot.dart';
@@ -29,7 +29,7 @@ class LandingSection extends StatelessWidget {
     if (!AppTheme.instance.useMobileLayout) {
       content.addAll(_buildEmbellishment(size.width));
     }
-    content.add(_buildTitle());
+    content.add(_buildTitle(context));
     content.add(Positioned(
         bottom: 0,
         child: Padding(
@@ -48,13 +48,14 @@ class LandingSection extends StatelessWidget {
     );
   }
 
-  Widget _buildTitle() => Align(
+  Widget _buildTitle(BuildContext context) => Align(
         alignment: Alignment.center,
         child: Padding(
           padding: AppTheme.instance.sectionSpacing,
           child: Wrap(
               verticalDirection: VerticalDirection.up,
               crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: WrapAlignment.center,
               spacing: AppTheme.instance.smallHorizontalSpacing,
               runSpacing: AppTheme.instance.mediumVerticalSpacing,
               children: <Widget>[
@@ -71,11 +72,11 @@ class LandingSection extends StatelessWidget {
                               : TextAlign.start,
                           softWrap: true,
                           text: TextSpan(
-                              text: "${AppIntl.current.firstname} ",
+                              text: "${AppIntl.of(context).firstname} ",
                               style: _titleWhiteStyle,
                               children: <TextSpan>[
                                 TextSpan(
-                                    text: AppIntl.current.lastname,
+                                    text: AppIntl.of(context).lastname,
                                     style: _titleOrangeStyle)
                               ])),
                     ),
@@ -86,11 +87,11 @@ class LandingSection extends StatelessWidget {
                               : TextAlign.start,
                           softWrap: true,
                           text: TextSpan(
-                              text: AppIntl.current.landing_subtitle_part_1,
+                              text: AppIntl.of(context).landing_subtitle_part_1,
                               children: <TextSpan>[
                                 TextSpan(
-                                    text:
-                                        AppIntl.current.landing_subtitle_part_2,
+                                    text: AppIntl.of(context)
+                                        .landing_subtitle_part_2,
                                     style: _titleOrangeStyle)
                               ],
                               style: _titleWhiteStyle)),
@@ -99,6 +100,7 @@ class LandingSection extends StatelessWidget {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/banner.png', scale: 2.7)
                   ],
@@ -108,7 +110,7 @@ class LandingSection extends StatelessWidget {
       );
 
   List<Widget> _buildEmbellishment(double width) => [
-          Positioned(
+        Positioned(
           bottom: 0,
           left: 0,
           child: DashedArc(

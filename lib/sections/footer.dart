@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/urls.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/embellishment/tail_section_shape.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -38,16 +38,16 @@ class Footer extends StatelessWidget {
                   textAlign: TextAlign.center,
                   softWrap: true,
                   text: TextSpan(
-                      text: "${AppIntl.current.firstname} ",
+                      text: "${AppIntl.of(context).firstname} ",
                       style: _whiteHeadlineStyle,
                       children: <TextSpan>[
                         TextSpan(
-                            text: AppIntl.current.lastname,
+                            text: AppIntl.of(context).lastname,
                             style: _orangeHeadlineStyle)
                       ])),
-              Text(AppIntl.current.landing_subtitle_part_1,
+              Text(AppIntl.of(context).landing_subtitle_part_1,
                   style: _whiteHeadlineStyle, textAlign: TextAlign.center),
-              Text(AppIntl.current.landing_subtitle_part_2,
+              Text(AppIntl.of(context).landing_subtitle_part_2,
                   style: _orangeHeadlineStyle, textAlign: TextAlign.center),
               SizedBox(height: AppTheme.instance.smallVerticalSpacing),
               InkWell(

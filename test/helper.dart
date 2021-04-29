@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 
 
 /// Load the l10n classes. Take the [child] widget to test
