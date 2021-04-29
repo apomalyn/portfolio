@@ -8,6 +8,7 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    print(size);
 
     return Container(
       width: size.width,
@@ -37,7 +38,7 @@ class AboutSection extends StatelessWidget {
                             height: AppTheme.instance.mediumVerticalSpacing),
                         Container(
                           width: size.width > 685
-                              ? size.width * 0.25
+                              ? size.width * 0.30
                               : size.width * 0.8,
                           child: Text(
                               AppIntl.of(context).about_first_paragraph,
@@ -48,23 +49,31 @@ class AboutSection extends StatelessWidget {
                         ),
                         SizedBox(
                             height: AppTheme.instance.smallVerticalSpacing),
-                        Container(
-                          width: size.width > 685
-                              ? size.width * 0.25
-                              : size.width * 0.8,
-                          child: Text(
-                              AppIntl.of(context).about_second_paragraph,
-                              style: AppTheme.instance.theme.textTheme.bodyText1
-                                  .copyWith(color: AppTheme.white),
-                              textAlign: TextAlign.left,
-                              overflow: TextOverflow.fade),
-                        )
+                        if (AppIntl.of(context)
+                            .about_second_paragraph
+                            .isNotEmpty)
+                          Container(
+                            width: size.width > 685
+                                ? size.width * 0.30
+                                : size.width * 0.8,
+                            child: Text(
+                                AppIntl.of(context).about_second_paragraph,
+                                style: AppTheme
+                                    .instance.theme.textTheme.bodyText1
+                                    .copyWith(color: AppTheme.white),
+                                textAlign: TextAlign.left,
+                                overflow: TextOverflow.fade),
+                          )
                       ],
                     ),
                     Stack(
                       alignment: Alignment.topRight,
                       children: [
-                        CircleImageAnimated(AssetImage('assets/images/picture_account.jpg'), hoverColor: AppTheme.orange, zoomOnHover: true, radius: 150),
+                        CircleImageAnimated(
+                            AssetImage('assets/images/picture_account.jpg'),
+                            hoverColor: AppTheme.orange,
+                            zoomOnHover: true,
+                            radius: 150),
                         W(width: 100, radians: 0.25)
                       ],
                     )
