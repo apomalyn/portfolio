@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/circle_image_animated.dart';
 import 'package:portfolio/widgets/embellishment/w_painter.dart';

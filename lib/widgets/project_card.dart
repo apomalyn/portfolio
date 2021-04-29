@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/project_data.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -126,7 +126,7 @@ class _ProjectCardState extends State<ProjectCard> {
     if (widget.projectData.githubUrl.isNotEmpty) {
       actions.add(IconButton(
         icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
-        tooltip: AppIntl.current.github_tooltip,
+        tooltip: AppIntl.of(context).github_tooltip,
         onPressed: () async {
           if (await canLaunch(widget.projectData.githubUrl)) {
             await launch(widget.projectData.githubUrl);

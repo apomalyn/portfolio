@@ -12,7 +12,7 @@ import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
 
-import 'generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 
 void main() {
   setupLocator();
@@ -34,8 +34,9 @@ class MyApp extends StatelessWidget {
             AppIntl.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate
           ],
-          supportedLocales: AppIntl.delegate.supportedLocales,
+          supportedLocales: AppIntl.supportedLocales,
           home: Portfolio(),
         ),
       ),

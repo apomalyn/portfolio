@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/locator.dart';
 import 'package:portfolio/providers/locale_provider.dart';
 import 'package:portfolio/utils/app_theme.dart';

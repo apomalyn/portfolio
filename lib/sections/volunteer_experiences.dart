@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/volunteer_experiences_data.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/models/volunteer_data.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/collapsable_card.dart';
@@ -29,7 +29,7 @@ class VolunteerExperiencesSection extends StatelessWidget {
                 child: Wrap(
                   runSpacing: AppTheme.instance.mediumVerticalSpacing,
                   spacing: AppTheme.instance.mediumHorizontalSpacing,
-                  children: _buildExperiences(),
+                  children: _buildExperiences(AppIntl.of(context)),
                 ),
               )
             ],
@@ -37,10 +37,10 @@ class VolunteerExperiencesSection extends StatelessWidget {
     );
   }
 
-  List<Widget> _buildExperiences() {
+  List<Widget> _buildExperiences(AppIntl intl) {
     List<Widget> experiences = [];
 
-    for (VolunteerData data in volunteerExperiencesData) {
+    for (VolunteerData data in volunteerExperiencesData(intl)) {
       experiences.add(CollapsableCard(
           title: Text(data.role, style: _titleOrangeStyle),
           details: data.details,

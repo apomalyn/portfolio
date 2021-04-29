@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/projects_data.dart';
 import 'package:portfolio/models/project_data.dart';
-import 'package:portfolio/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
 import 'package:portfolio/widgets/project_card.dart';
 
@@ -25,7 +25,7 @@ class ProjectsSection extends StatelessWidget {
             Center(
               child: Wrap(
                 spacing: 50,
-                children: _buildProjectCards(projectsData),
+                children: _buildProjectCards(projectsData(AppIntl.of(context))),
               ),
             )
           ],
