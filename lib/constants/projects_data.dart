@@ -32,4 +32,15 @@ List<ProjectData> projectsData(AppIntl intl) => [
       otherUrlIcon: Icon(Icons.article_outlined, color: Colors.white),
       otherUrlTooltip: intl.project_tragile_tooltip,
       backgroundColor: Color(0xff43a047)),
+
+  // Herbarium
+  ProjectData(
+      name: intl.project_herbarium_title,
+      descriptionIntl: intl.project_herbarium_description,
+      logoPath: "assets/logos/tragile_logo.png",
+      githubUrl: "https://github.com/eyjafjoll/HackQC19-UI",
+      // otherUrl: "https://www.etsmtl.ca/en/news/2019/competition-hackqc2019-ets/",
+      // otherUrlIcon: Icon(Icons.movie_creation_outlined, color: Colors.white),
+      // otherUrlTooltip: intl.project_herbarium_tooltip,
+      backgroundColor: Color(0xff43a047)),
 ];

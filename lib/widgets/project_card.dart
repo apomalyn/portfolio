@@ -5,16 +5,16 @@ import 'package:portfolio/utils/app_theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatefulWidget {
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
-  final ProjectData projectData;
+  final ProjectData? projectData;
 
   final bool isTextWhite;
 
   const ProjectCard(
-      {Key key,
-      @required this.backgroundColor,
-      @required this.projectData,
+      {Key? key,
+      required this.backgroundColor,
+      required this.projectData,
       this.isTextWhite = true})
       : super(key: key);
 
@@ -36,7 +36,7 @@ class _ProjectCardState extends State<ProjectCard> {
         semanticContainer: true,
         elevation: 5,
         margin: EdgeInsets.all(10),
-        child: AppTheme.instance.useMobileLayout ? GestureDetector(
+        child: AppTheme.instance!.useMobileLayout ? GestureDetector(
           onTap: () => _mouseHover(!this._isHovered),
           child: _buildCardContent(),
         ):MouseRegion(
@@ -55,7 +55,7 @@ class _ProjectCardState extends State<ProjectCard> {
               alignment: Alignment.topLeft,
               child: Padding(
                 padding: EdgeInsets.all(20.0),
-                child: Text(widget.projectData.name,
+                child: Text(widget.projectData!.name,
                     style: TextStyle(
                         fontSize: 20,
                         color:
@@ -66,7 +66,7 @@ class _ProjectCardState extends State<ProjectCard> {
               alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Text(widget.projectData.descriptionIntl,
+                child: Text(widget.projectData!.descriptionIntl,
                     style: TextStyle(
                         color:
                             widget.isTextWhite ? Colors.white : Colors.black)),
@@ -88,13 +88,13 @@ class _ProjectCardState extends State<ProjectCard> {
               children: [
                 Align(
                   alignment: Alignment.center,
-                  child: Padding(padding: EdgeInsets.all(25),child: Image.asset(widget.projectData.logoPath)),
+                  child: Padding(padding: EdgeInsets.all(25),child: Image.asset(widget.projectData!.logoPath)),
                 ),
                 Align(
                   alignment: Alignment.bottomRight,
                   child: Padding(
                     padding: EdgeInsets.all(20.0),
-                    child: Text(widget.projectData.name,
+                    child: Text(widget.projectData!.name,
                         style: TextStyle(
                             fontSize: 20,
                             color: widget.isTextWhite
@@ -110,28 +110,28 @@ class _ProjectCardState extends State<ProjectCard> {
   Widget _buildActionButtons() {
     List<Widget> actions = [];
 
-    if (widget.projectData.otherUrl.isNotEmpty) {
+    if (widget.projectData!.otherUrl.isNotEmpty) {
       actions.add(IconButton(
-          icon: widget.projectData.otherUrlIcon,
-          tooltip: widget.projectData.otherUrlTooltip,
+          icon: widget.projectData!.otherUrlIcon!,
+          tooltip: widget.projectData!.otherUrlTooltip,
           onPressed: () async {
-            if (await canLaunch(widget.projectData.otherUrl)) {
-              await launch(widget.projectData.otherUrl);
+            if (await canLaunch(widget.projectData!.otherUrl)) {
+              await launch(widget.projectData!.otherUrl);
             } else {
-              throw 'Could not launch ${widget.projectData.otherUrl}';
+              throw 'Could not launch ${widget.projectData!.otherUrl}';
             }
           }));
     }
 
-    if (widget.projectData.githubUrl.isNotEmpty) {
+    if (widget.projectData!.githubUrl.isNotEmpty) {
       actions.add(IconButton(
         icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
-        tooltip: AppIntl.of(context).github_tooltip,
+        tooltip: AppIntl.of(context)!.github_tooltip,
         onPressed: () async {
-          if (await canLaunch(widget.projectData.githubUrl)) {
-            await launch(widget.projectData.githubUrl);
+          if (await canLaunch(widget.projectData!.githubUrl)) {
+            await launch(widget.projectData!.githubUrl);
           } else {
-            throw 'Could not launch ${widget.projectData.githubUrl}';
+            throw 'Could not launch ${widget.projectData!.githubUrl}';
           }
         }));
     }

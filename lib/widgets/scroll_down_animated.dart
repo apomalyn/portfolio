@@ -9,8 +9,8 @@ class ScrollDownAnimated extends StatefulWidget {
 
 class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
+  late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -36,11 +36,11 @@ class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(AppIntl
-                .of(context)
+                .of(context)!
                 .landing_scroll,
-                style: AppTheme.instance.theme.textTheme.bodyText1
+                style: AppTheme.instance!.theme.textTheme.bodyText1!
                     .copyWith(color: AppTheme.white)),
-            SizedBox(height: AppTheme.instance.smallVerticalSpacing / 3),
+            SizedBox(height: AppTheme.instance!.smallVerticalSpacing / 3),
             ConstrainedBox(
               constraints: BoxConstraints(maxHeight: 40, maxWidth: 40),
               child: AnimatedBuilder(

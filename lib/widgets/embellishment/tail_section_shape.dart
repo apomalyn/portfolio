@@ -9,7 +9,7 @@ class TailSectionShape extends StatelessWidget {
   final Color color;
 
   /// Child of the section.
-  final Widget child;
+  final Widget? child;
 
   const TailSectionShape({this.color = AppTheme.lightBlack, this.child});
 
@@ -26,7 +26,7 @@ class TailSectionShape extends StatelessWidget {
 /// This painter will create a shape similar to tail of the fox logo.
 class _TailShapePainter extends CustomPainter {
 
-  final Color color;
+  final Color? color;
 
   final Paint _paint = Paint()..style = PaintingStyle.fill;
 
@@ -34,14 +34,14 @@ class _TailShapePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    _paint.color = this.color;
+    _paint.color = this.color!;
 
     Offset tailBottomLeft = Offset(size.width * 0.35, size.height * 0.45);
     Offset tailCenter = Offset(size.width * 0.5, size.height * 0.15);
     Offset tailBottomRight = Offset(size.width * 0.65, size.height * 0.45);
     Offset tailUpperRight = Offset(size.width, 0);
 
-    if(AppTheme.instance.useMobileLayout) {
+    if(AppTheme.instance!.useMobileLayout) {
       tailBottomLeft = Offset(size.width * 0.30, size.height * 0.35);
       tailCenter = Offset(size.width * 0.5, size.height * 0.15);
       tailBottomRight = Offset(size.width * 0.70, size.height * 0.35);

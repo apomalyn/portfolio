@@ -17,7 +17,7 @@ class ProjectData {
   final String otherUrlTooltip;
 
   /// Icon that represent the other link
-  final Icon otherUrlIcon;
+  final Icon? otherUrlIcon;
 
   /// Url of the logo
   final String logoPath;
@@ -26,14 +26,14 @@ class ProjectData {
   final Color backgroundColor;
 
   ProjectData(
-      {@required String name,
-      @required String descriptionIntl,
-      @required String logoPath,
-      @required Color backgroundColor,
+      {required String name,
+      required String descriptionIntl,
+      required String logoPath,
+      required Color backgroundColor,
       String githubUrl = "",
       String otherUrl = "",
       String otherUrlTooltip = "",
-      Icon otherUrlIcon})
+      Icon? otherUrlIcon})
       : this.name = name,
         this.descriptionIntl = descriptionIntl,
         this.githubUrl = githubUrl,

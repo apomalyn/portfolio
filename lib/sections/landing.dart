@@ -6,17 +6,17 @@ import 'package:portfolio/widgets/embellishment/dot.dart';
 import 'package:portfolio/widgets/scroll_down_animated.dart';
 
 class LandingSection extends StatelessWidget {
-  final TextStyle _titleWhiteStyle = AppTheme.instance.theme.textTheme.headline1
+  final TextStyle _titleWhiteStyle = AppTheme.instance!.theme.textTheme.headline1!
       .copyWith(color: AppTheme.white);
 
   final TextStyle _titleOrangeStyle = AppTheme
-      .instance.theme.textTheme.headline1
+      .instance!.theme.textTheme.headline1!
       .copyWith(color: AppTheme.orangeRed);
 
   /// Used to determine the exact height available for the section.
   final appBarHeight;
 
-  LandingSection({@required this.appBarHeight});
+  LandingSection({required this.appBarHeight});
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +26,14 @@ class LandingSection extends StatelessWidget {
     List<Widget> content = [];
 
     // Adding embellishment if on desktop
-    if (!AppTheme.instance.useMobileLayout) {
+    if (!AppTheme.instance!.useMobileLayout) {
       content.addAll(_buildEmbellishment(size.width));
     }
     content.add(_buildTitle(context));
     content.add(Positioned(
         bottom: 0,
         child: Padding(
-          padding: EdgeInsets.all(AppTheme.instance.smallVerticalSpacing / 2),
+          padding: EdgeInsets.all(AppTheme.instance!.smallVerticalSpacing / 2),
           child: ScrollDownAnimated(),
         )));
 
@@ -51,46 +51,46 @@ class LandingSection extends StatelessWidget {
   Widget _buildTitle(BuildContext context) => Align(
         alignment: Alignment.center,
         child: Padding(
-          padding: AppTheme.instance.sectionSpacing,
+          padding: AppTheme.instance!.sectionSpacing,
           child: Wrap(
               verticalDirection: VerticalDirection.up,
               crossAxisAlignment: WrapCrossAlignment.center,
               alignment: WrapAlignment.center,
-              spacing: AppTheme.instance.smallHorizontalSpacing,
-              runSpacing: AppTheme.instance.mediumVerticalSpacing,
+              spacing: AppTheme.instance!.smallHorizontalSpacing,
+              runSpacing: AppTheme.instance!.mediumVerticalSpacing,
               children: <Widget>[
                 Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: AppTheme.instance.useMobileLayout
+                  crossAxisAlignment: AppTheme.instance!.useMobileLayout
                       ? CrossAxisAlignment.center
                       : CrossAxisAlignment.start,
                   children: [
                     Flexible(
                       child: RichText(
-                          textAlign: AppTheme.instance.useMobileLayout
+                          textAlign: AppTheme.instance!.useMobileLayout
                               ? TextAlign.center
                               : TextAlign.start,
                           softWrap: true,
                           text: TextSpan(
-                              text: "${AppIntl.of(context).firstname} ",
+                              text: "${AppIntl.of(context)!.firstname} ",
                               style: _titleWhiteStyle,
                               children: <TextSpan>[
                                 TextSpan(
-                                    text: AppIntl.of(context).lastname,
+                                    text: AppIntl.of(context)!.lastname,
                                     style: _titleOrangeStyle)
                               ])),
                     ),
                     Flexible(
                       child: RichText(
-                          textAlign: AppTheme.instance.useMobileLayout
+                          textAlign: AppTheme.instance!.useMobileLayout
                               ? TextAlign.center
                               : TextAlign.start,
                           softWrap: true,
                           text: TextSpan(
-                              text: AppIntl.of(context).landing_subtitle_part_1,
+                              text: AppIntl.of(context)!.landing_subtitle_part_1,
                               children: <TextSpan>[
                                 TextSpan(
-                                    text: AppIntl.of(context)
+                                    text: AppIntl.of(context)!
                                         .landing_subtitle_part_2,
                                     style: _titleOrangeStyle)
                               ],
@@ -123,14 +123,14 @@ class LandingSection extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: AppTheme.instance.largeVerticalSpacing * 1.5,
-          left: AppTheme.instance.mediumHorizontalSpacing * 1.5,
+          top: AppTheme.instance!.largeVerticalSpacing * 1.5,
+          left: AppTheme.instance!.mediumHorizontalSpacing * 1.5,
           child: Dot(20),
         ),
         if (width > 1610)
           Positioned(
-            bottom: AppTheme.instance.largeVerticalSpacing * 2,
-            left: AppTheme.instance.largeHorizontalSpacing * 4,
+            bottom: AppTheme.instance!.largeVerticalSpacing * 2,
+            left: AppTheme.instance!.largeHorizontalSpacing * 4,
             child: Dot(20, color: AppTheme.orange),
           ),
       ];

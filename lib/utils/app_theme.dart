@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static AppTheme _instance;
+  static AppTheme? _instance;
 
-  static AppTheme get instance {
+  static AppTheme? get instance {
     if (_instance == null) {
       _instance = AppTheme();
     }
@@ -60,14 +60,14 @@ class AppTheme {
               fontFamily: 'Montserrat'))
   );
 
-  Size _size;
-  Size get size => _size;
+  Size? _size;
+  Size? get size => _size;
 
   void init(MediaQueryData data) {
     _size = data.size;
   }
 
-  bool get useMobileLayout => _size.shortestSide < 600;
+  bool get useMobileLayout => _size!.shortestSide < 600;
 
   /// Theme data for the application.
   ThemeData get theme => useMobileLayout ? mobileTheme:desktopTheme;
@@ -80,15 +80,15 @@ class AppTheme {
         largeVerticalSpacing);
   }
 
-  double get largeVerticalSpacing => _size.height * 0.1;
+  double get largeVerticalSpacing => _size!.height * 0.1;
 
-  double get mediumVerticalSpacing => _size.height * 0.05;
+  double get mediumVerticalSpacing => _size!.height * 0.05;
 
-  double get smallVerticalSpacing => _size.height * 0.03;
+  double get smallVerticalSpacing => _size!.height * 0.03;
 
-  double get largeHorizontalSpacing => _size.width * 0.1;
+  double get largeHorizontalSpacing => _size!.width * 0.1;
 
-  double get mediumHorizontalSpacing => _size.width * 0.05;
+  double get mediumHorizontalSpacing => _size!.width * 0.05;
 
-  double get smallHorizontalSpacing => _size.width * 0.03;
+  double get smallHorizontalSpacing => _size!.width * 0.03;
 }

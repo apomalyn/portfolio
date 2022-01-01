@@ -10,7 +10,7 @@ class ApplicationBar extends StatefulWidget {
 }
 
 class _ApplicationBarState extends State<ApplicationBar> {
-  Locale _locale;
+  Locale? _locale;
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +38,8 @@ class _ApplicationBarState extends State<ApplicationBar> {
                 locator<LocaleProvider>().changeLocale(_locale);
               });
             },
-            child: Text(AppIntl.of(context).other_lang,
-                style: AppTheme.instance.theme.textTheme.bodyText1
+            child: Text(AppIntl.of(context)!.other_lang,
+                style: AppTheme.instance!.theme.textTheme.bodyText1!
                     .copyWith(color: AppTheme.white)),
           ),
         )

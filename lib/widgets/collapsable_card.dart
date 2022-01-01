@@ -10,7 +10,7 @@ class CollapsableCard extends StatefulWidget {
   final String image; // TODO make it not required
 
   /// Semantics label of the [image]. Required if [image] is provided.
-  final String semanticsImageLabel;
+  final String? semanticsImageLabel;
 
   /// Title of the card, the [title] is situated under the [image]
   final Text title;
@@ -22,12 +22,12 @@ class CollapsableCard extends StatefulWidget {
   final int maxLines;
 
   /// Url to open when [image] is tapped
-  final String url;
+  final String? url;
 
   const CollapsableCard(
-      {@required this.title,
-      @required this.details,
-      @required this.image,
+      {required this.title,
+      required this.details,
+      required this.image,
       this.semanticsImageLabel,
       this.maxLines = 3,
       this.url});
@@ -127,8 +127,8 @@ class _CollapsableCardState extends State<CollapsableCard> {
 
   void _handleImageTap() async {
     if (widget.url != null) {
-      if (await canLaunch(widget.url)) {
-        await launch(widget.url);
+      if (await canLaunch(widget.url!)) {
+        await launch(widget.url!);
       } else {
         throw 'Could not launch ${widget.url}';
       }

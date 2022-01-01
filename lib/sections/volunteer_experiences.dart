@@ -7,7 +7,7 @@ import 'package:portfolio/widgets/collapsable_card.dart';
 
 class VolunteerExperiencesSection extends StatelessWidget {
   final TextStyle _titleOrangeStyle =
-      AppTheme.instance.theme.textTheme.headline5.copyWith(color: AppTheme.orangeRed);
+      AppTheme.instance!.theme.textTheme.headline5!.copyWith(color: AppTheme.orangeRed);
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +17,19 @@ class VolunteerExperiencesSection extends StatelessWidget {
       width: size.width,
       color: AppTheme.white,
       child: Padding(
-          padding: AppTheme.instance.sectionSpacing,
+          padding: AppTheme.instance!.sectionSpacing,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(AppIntl.of(context).volunteer_title,
-                  style: AppTheme.instance.theme.textTheme.headline2),
-              SizedBox(height: AppTheme.instance.largeVerticalSpacing),
+              Text(AppIntl.of(context)!.volunteer_title,
+                  style: AppTheme.instance!.theme.textTheme.headline2),
+              SizedBox(height: AppTheme.instance!.largeVerticalSpacing),
               Center(
                 child: Wrap(
-                  runSpacing: AppTheme.instance.mediumVerticalSpacing,
-                  spacing: AppTheme.instance.mediumHorizontalSpacing,
-                  children: _buildExperiences(AppIntl.of(context)),
+                  runSpacing: AppTheme.instance!.mediumVerticalSpacing,
+                  spacing: AppTheme.instance!.mediumHorizontalSpacing,
+                  children: _buildExperiences(AppIntl.of(context)!),
                 ),
               )
             ],

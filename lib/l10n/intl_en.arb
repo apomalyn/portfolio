@@ -18,7 +18,7 @@
   "project_status_done": "Done",
 
   "project_etsmobile_title": "ÉTSMobile",
-  "project_etsmobile_description": "ÉTSMobile is an application developed by and for all students of the École de Technologie Supérieure. I had the chance to participate the architecture and the fourth version of this application.",
+  "project_etsmobile_description": "ÉTSMobile is an application developed by and for all students of the École de Technologie Supérieure. I had the chance to participate in the design and development of the architecture of the fourth version.",
 
   "project_cinet_title": "Cinet",
   "project_cinet_description": "Cinet is a project mixing hardware and software for the good of amateur cinema. The main purpose is to offer electronic probes easily controllable and customisable.",
@@ -27,6 +27,10 @@
   "project_tragile_title": "Tragile",
   "project_tragile_description": "Each pedestrian is unique, from colourblind to agoraphobic passing by deaf, blind, or have a stroller or luggage. Unfortunately, pedestrians are the most vulnerable users on the road. First prize of the HackQC 19, Tragile offers safer routes adapted to the user.",
   "project_tragile_tooltip": "See the article published in the ÉTS journal.",
+
+  "project_herbarium_title": "Herbarium",
+  "project_herbarium_description": "Herbarium is a semi-autonomous greenhouse that can help people growing plants in their house. It was my end of study project where I was in charge of all the software.",
+  "project_herbarium_tooltip": "See the final presentation.",
 
   "about_first_paragraph": "I love the design process. From planning, to software architecture, to development, through team coordination, the realization of the release and the feeling of always improving the product. Curious about everything and about learning, I love travel, the adventure that accompanies it and meeting people.",
   "about_second_paragraph": "",
