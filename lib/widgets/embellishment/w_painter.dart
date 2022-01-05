@@ -8,7 +8,7 @@ class W extends StatelessWidget {
   final double radians;
 
   /// Size of the W
-  final double width;
+  final double? width;
 
   W({this.width, this.color = AppTheme.white, this.radians = 0});
 

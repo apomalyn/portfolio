@@ -11,10 +11,10 @@ class CircleImageAnimated extends StatefulWidget {
   final double radius;
 
   const CircleImageAnimated(this.image,
-      {Key key,
-      @required this.hoverColor,
-      @required this.zoomOnHover,
-      @required this.radius})
+      {Key? key,
+      required this.hoverColor,
+      required this.zoomOnHover,
+      required this.radius})
       : super(key: key);
 
   @override

@@ -24,10 +24,10 @@ class DashedArc extends StatelessWidget {
   final double angleBetweenDash;
 
   /// Width of each strokes
-  final double strokeWidth;
+  final double? strokeWidth;
 
   /// Center of the arc.
-  final Offset arcCenter;
+  final Offset? arcCenter;
 
   /// Draw a dashed arc, the offset is the center of the arc inside de canvas.
   const DashedArc(this.radius,
@@ -82,17 +82,17 @@ class _DashedArcPainter extends CustomPainter {
   final double angleBetweenDash;
 
   /// Width of each strokes
-  final double strokeWidth;
+  final double? strokeWidth;
 
   /// Center of the arc.
-  final Offset arcCenter;
+  final Offset? arcCenter;
 
   final Paint _paint = Paint()..style = PaintingStyle.stroke;
 
   static double degToRad(double degree) => degree * (math.pi / 180);
 
   _DashedArcPainter(
-      {@required this.radius,
+      {required this.radius,
       double startAngle = 0.0,
       double sweepAngle = 90.0,
       double sizeDash = 10.0,
@@ -109,10 +109,10 @@ class _DashedArcPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Initialize
     _paint.color = this.color;
-    if (this.strokeWidth != null) _paint.strokeWidth = this.strokeWidth;
+    if (this.strokeWidth != null) _paint.strokeWidth = this.strokeWidth!;
 
     var rect = Rect.fromCenter(
-        center: arcCenter, width: this.radius * 2, height: this.radius * 2);
+        center: arcCenter!, width: this.radius * 2, height: this.radius * 2);
 
     var currentStartAngle = this.startAngle;
 

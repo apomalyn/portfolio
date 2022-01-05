@@ -14,15 +14,15 @@ class AboutSection extends StatelessWidget {
       width: size.width,
       color: AppTheme.lightBlack,
       child: Padding(
-          padding: AppTheme.instance.sectionSpacing,
+          padding: AppTheme.instance!.sectionSpacing,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Wrap(
-                  spacing: AppTheme.instance.largeVerticalSpacing,
-                  runSpacing: AppTheme.instance.largeVerticalSpacing,
+                  spacing: AppTheme.instance!.largeVerticalSpacing,
+                  runSpacing: AppTheme.instance!.largeVerticalSpacing,
                   alignment: WrapAlignment.center,
                   children: [
                     Column(
@@ -30,26 +30,26 @@ class AboutSection extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                            "${AppIntl.of(context).firstname} ${AppIntl.of(context).lastname}.",
+                            "${AppIntl.of(context)!.firstname} ${AppIntl.of(context)!.lastname}.",
                             textAlign: TextAlign.start,
-                            style: AppTheme.instance.theme.textTheme.headline2
+                            style: AppTheme.instance!.theme.textTheme.headline2!
                                 .copyWith(color: AppTheme.white)),
                         SizedBox(
-                            height: AppTheme.instance.mediumVerticalSpacing),
+                            height: AppTheme.instance!.mediumVerticalSpacing),
                         Container(
                           width: size.width > 685
                               ? size.width * 0.30
                               : size.width * 0.8,
                           child: Text(
-                              AppIntl.of(context).about_first_paragraph,
-                              style: AppTheme.instance.theme.textTheme.bodyText1
+                              AppIntl.of(context)!.about_first_paragraph,
+                              style: AppTheme.instance!.theme.textTheme.bodyText1!
                                   .copyWith(color: AppTheme.white),
                               textAlign: TextAlign.left,
                               overflow: TextOverflow.fade),
                         ),
                         SizedBox(
-                            height: AppTheme.instance.smallVerticalSpacing),
-                        if (AppIntl.of(context)
+                            height: AppTheme.instance!.smallVerticalSpacing),
+                        if (AppIntl.of(context)!
                             .about_second_paragraph
                             .isNotEmpty)
                           Container(
@@ -57,9 +57,9 @@ class AboutSection extends StatelessWidget {
                                 ? size.width * 0.30
                                 : size.width * 0.8,
                             child: Text(
-                                AppIntl.of(context).about_second_paragraph,
+                                AppIntl.of(context)!.about_second_paragraph,
                                 style: AppTheme
-                                    .instance.theme.textTheme.bodyText1
+                                    .instance!.theme.textTheme.bodyText1!
                                     .copyWith(color: AppTheme.white),
                                 textAlign: TextAlign.left,
                                 overflow: TextOverflow.fade),
