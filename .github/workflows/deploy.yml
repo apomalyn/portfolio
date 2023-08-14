@@ -24,7 +24,7 @@ jobs:
       - name: Build web app
         run: flutter build web --web-renderer html
       - name: Publish to Github pages
-        uses: Cecilapp/GitHub-Pages-deploy@3
+        uses: Cecilapp/GitHub-Pages-deploy@v3
         with:
           email: chretienxavier42@gmail.com
           build_dir: ./build/web
