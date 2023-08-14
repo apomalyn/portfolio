@@ -73,7 +73,7 @@ class Footer extends StatelessWidget {
                 ],
               ),
               SizedBox(height: AppTheme.instance!.smallVerticalSpacing),
-              Text(AppIntl.of(context)!.footer_copyright,
+              Text(AppIntl.of(context)!.footer_copyright(DateTime.now().year),
                   style: _whiteTextStyle, textAlign: TextAlign.center)
             ],
           ),

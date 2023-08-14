@@ -3,11 +3,11 @@
   "lastname": "Chrétien",
   "other_lang": "FR",
 
-  "landing_subtitle_part_1": "Student in ",
-  "landing_subtitle_part_2": "software engineering",
+  "landing_subtitle_part_1": "Software ",
+  "landing_subtitle_part_2": "developer",
   "landing_scroll": "Scroll",
 
-  "github_tooltip": "See the project of Github",
+  "github_tooltip": "See the project on Github",
   "link_default_tooltip": "See the project website",
 
   "see_more": "See more",
@@ -49,7 +49,14 @@
   "journey_in_dev": "This section is currently in development, in the meantime, to see my journey you could head off my ",
   "journey_in_dev_2": "LinkedIn profile.",
 
-  "footer_copyright": "\u00a9 2021 Xavier Chrétien - All Rights Reserved",
+  "footer_copyright": "\u00a9 {year} Xavier Chrétien - All Rights Reserved",
+  "@footer_copyright": {
+    "placeholders": {
+        "year": {
+            "type": "int"
+        }
+    }
+  },
   "footer_github_tooltip": "See my Github profile.",
   "footer_linkedin_tooltip": "See my LinkedIn profile.",
   "footer_twitter_tooltip": "See my Twitter account."
