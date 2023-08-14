@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 import 'package:portfolio/utils/app_theme.dart';
 
 class Dot extends StatelessWidget {

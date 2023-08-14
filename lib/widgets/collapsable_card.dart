@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/app_theme.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Vertical space between the elements of the card.
 const double _verticalSpace = 20;
@@ -86,6 +86,7 @@ class _CollapsableCardState extends State<CollapsableCard> {
                   //height: getHeight(), TODO find a way to determine the correct size of the collapsed and the expanded state
                   child: Text(
                     widget.details,
+                    style: Theme.of(context).textTheme.bodySmall,
                     maxLines: _isExpanded ? 2 ^ 64 : widget.maxLines,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -127,8 +128,8 @@ class _CollapsableCardState extends State<CollapsableCard> {
 
   void _handleImageTap() async {
     if (widget.url != null) {
-      if (await canLaunch(widget.url!)) {
-        await launch(widget.url!);
+      if (await canLaunchUrlString(widget.url!)) {
+        await launchUrlString(widget.url!);
       } else {
         throw 'Could not launch ${widget.url}';
       }

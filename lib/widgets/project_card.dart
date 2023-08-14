@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/models/project_data.dart';
 import 'package:flutter_gen/gen_l10n/app_intl.dart';
 import 'package:portfolio/utils/app_theme.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectCard extends StatefulWidget {
   final Color? backgroundColor;
@@ -115,8 +115,8 @@ class _ProjectCardState extends State<ProjectCard> {
           icon: widget.projectData!.otherUrlIcon!,
           tooltip: widget.projectData!.otherUrlTooltip,
           onPressed: () async {
-            if (await canLaunch(widget.projectData!.otherUrl)) {
-              await launch(widget.projectData!.otherUrl);
+            if (await canLaunchUrlString(widget.projectData!.otherUrl)) {
+              await launchUrlString(widget.projectData!.otherUrl);
             } else {
               throw 'Could not launch ${widget.projectData!.otherUrl}';
             }
@@ -128,8 +128,8 @@ class _ProjectCardState extends State<ProjectCard> {
         icon: ImageIcon(AssetImage("assets/logos/github_mark.png")),
         tooltip: AppIntl.of(context)!.github_tooltip,
         onPressed: () async {
-          if (await canLaunch(widget.projectData!.githubUrl)) {
-            await launch(widget.projectData!.githubUrl);
+          if (await canLaunchUrlString(widget.projectData!.githubUrl)) {
+            await launchUrlString(widget.projectData!.githubUrl);
           } else {
             throw 'Could not launch ${widget.projectData!.githubUrl}';
           }

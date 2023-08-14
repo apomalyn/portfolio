@@ -6,11 +6,11 @@ import 'package:portfolio/widgets/embellishment/dot.dart';
 import 'package:portfolio/widgets/scroll_down_animated.dart';
 
 class LandingSection extends StatelessWidget {
-  final TextStyle _titleWhiteStyle = AppTheme.instance!.theme.textTheme.headline1!
+  final TextStyle _titleWhiteStyle = AppTheme.instance!.theme.textTheme.displayLarge!
       .copyWith(color: AppTheme.white);
 
   final TextStyle _titleOrangeStyle = AppTheme
-      .instance!.theme.textTheme.headline1!
+      .instance!.theme.textTheme.displayLarge!
       .copyWith(color: AppTheme.orangeRed);
 
   /// Used to determine the exact height available for the section.

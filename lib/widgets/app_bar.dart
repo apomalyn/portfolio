@@ -39,7 +39,7 @@ class _ApplicationBarState extends State<ApplicationBar> {
               });
             },
             child: Text(AppIntl.of(context)!.other_lang,
-                style: AppTheme.instance!.theme.textTheme.bodyText1!
+                style: AppTheme.instance!.theme.textTheme.bodyLarge!
                     .copyWith(color: AppTheme.white)),
           ),
         )
