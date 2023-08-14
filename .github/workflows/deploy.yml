@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  pages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,9 +24,10 @@ jobs:
       - name: Build web app
         run: flutter build web --web-renderer html
       - name: Publish to Github pages
-        uses: Cecilapp/GitHub-Pages-deploy@2.0.1
+        uses: Cecilapp/GitHub-Pages-deploy@3
+        with:
+          email: chretienxavier42@gmail.com
+          build_dir: ./build/web
+          cname: xavierc.dev
         env:
-          EMAIL: chretienxavier42@gmail.com
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BUILD_DIR: ./build/web
-          CNAME: xavierc.dev
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
