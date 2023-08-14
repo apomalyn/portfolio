@@ -3,8 +3,8 @@
   "lastname": "Chrétien",
   "other_lang": "EN",
 
-  "landing_subtitle_part_1": "Étudiant en ",
-  "landing_subtitle_part_2": "génie logiciel",
+  "landing_subtitle_part_1": "Développeur ",
+  "landing_subtitle_part_2": "logiciel",
   "landing_scroll": "Défiler",
 
   "github_tooltip": "Voir le projet sur Github.",
@@ -49,7 +49,14 @@
   "journey_in_dev": "Cette section est actuellement en développement, en attendant, pour voir mon parcours vous pouvez visiter mon ",
   "journey_in_dev_2": "profil LinkedIn.",
 
-  "footer_copyright": "\u00a9 2021 Xavier Chrétien - Tous droits réservés",
+  "footer_copyright": "\u00a9 {year} Xavier Chrétien - Tous droits réservés",
+  "@footer_copyright": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
   "footer_github_tooltip": "Voir mon profil Github.",
   "footer_linkedin_tooltip": "Voir mon profil LinkedIn.",
   "footer_twitter_tooltip": "Voir mon compte Twitter."

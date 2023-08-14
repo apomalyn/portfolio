@@ -7,14 +7,14 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   final TextStyle _whiteHeadlineStyle = AppTheme
-      .instance!.theme.textTheme.headline6!
+      .instance!.theme.textTheme.titleLarge!
       .copyWith(color: AppTheme.white);
 
-  final TextStyle _whiteTextStyle = AppTheme.instance!.theme.textTheme.bodyText1!
+  final TextStyle _whiteTextStyle = AppTheme.instance!.theme.textTheme.bodyLarge!
       .copyWith(color: AppTheme.white);
 
   final TextStyle _orangeHeadlineStyle = AppTheme
-      .instance!.theme.textTheme.headline6!
+      .instance!.theme.textTheme.titleLarge!
       .copyWith(color: AppTheme.orangeRed);
 
   @override
@@ -51,7 +51,7 @@ class Footer extends StatelessWidget {
                   style: _orangeHeadlineStyle, textAlign: TextAlign.center),
               SizedBox(height: AppTheme.instance!.smallVerticalSpacing),
               InkWell(
-                onTap: () => _launchUrl(Urls.email),
+                onTap: () => launchUrl(Uri.parse(Urls.email)),
                 child: Text(Urls.email.substring(7), style: _whiteTextStyle),
               ),
               SizedBox(height: AppTheme.instance!.smallVerticalSpacing),
@@ -73,7 +73,7 @@ class Footer extends StatelessWidget {
                 ],
               ),
               SizedBox(height: AppTheme.instance!.smallVerticalSpacing),
-              Text(AppIntl.of(context)!.footer_copyright,
+              Text(AppIntl.of(context)!.footer_copyright(DateTime.now().year),
                   style: _whiteTextStyle, textAlign: TextAlign.center)
             ],
           ),
@@ -82,13 +82,9 @@ class Footer extends StatelessWidget {
     );
   }
 
-  void _launchUrl(String url) async {
-    await launch(url);
-  }
-
   Widget _buildSocialButton(String url, String tooltip, String imagePath) =>
       IconButton(
-        onPressed: () => _launchUrl(url),
+        onPressed: () => launchUrl(Uri.parse(url)),
         tooltip: tooltip,
         icon: Image.asset(imagePath),
       );

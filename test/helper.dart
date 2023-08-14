@@ -6,7 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_intl.dart';
 
 
 /// Load the l10n classes. Take the [child] widget to test
-Widget localizedWidget({@required Widget child, String locale = 'en'}) =>
+Widget localizedWidget({required Widget child, String locale = 'en'}) =>
     MaterialApp(
       localizationsDelegates: const [
         AppIntl.delegate,
