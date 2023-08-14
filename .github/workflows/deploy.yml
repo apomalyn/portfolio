@@ -7,6 +7,7 @@ on:
 
 permissions:
   pages: write
+  contents: write
 
 jobs:
   build:
@@ -16,9 +17,11 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.x'
+          channel: 'stable'
+          cache: true
       - name: Get packages from pub
         run: flutter pub get
       - name: Build web app
