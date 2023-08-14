@@ -22,7 +22,7 @@ jobs:
       - name: Get packages from pub
         run: flutter pub get
       - name: Build web app
-        run: flutter build web --web-renderer html
+        run: flutter build web
       - name: Publish to Github pages
         uses: Cecilapp/GitHub-Pages-deploy@v3
         with:

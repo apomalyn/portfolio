@@ -86,6 +86,6 @@ class Footer extends StatelessWidget {
       IconButton(
         onPressed: () => launchUrl(Uri.parse(url)),
         tooltip: tooltip,
-        icon: Image.asset(imagePath),
+        icon: Image.asset(imagePath, width: 32),
       );
 }
