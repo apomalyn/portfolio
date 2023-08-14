@@ -11,6 +11,12 @@ class ProjectsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+    final List<Widget> projects = [];
+
+    for(ProjectData data in projectsData(AppIntl.of(context)!)) {
+      projects.add(ProjectCard(backgroundColor: data.backgroundColor, projectData: data));
+    }
+
     return Container(
       width: size.width,
       color: AppTheme.white,
@@ -25,22 +31,12 @@ class ProjectsSection extends StatelessWidget {
             Center(
               child: Wrap(
                 spacing: 50,
-                children: _buildProjectCards(projectsData(AppIntl.of(context)!)),
+                children: projects,
               ),
             )
           ],
         )
       ),
     );
-  }
-
-  List<Widget> _buildProjectCards(List<ProjectData> datas) {
-    List<Widget> projects = [];
-
-    for(ProjectData data in datas) {
-      projects.add(ProjectCard(backgroundColor: data.backgroundColor, projectData: data));
-    }
-
-    return projects;
   }
 }
