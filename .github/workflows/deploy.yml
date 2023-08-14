@@ -3,7 +3,7 @@ name: Build and release to Github pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -15,11 +15,11 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '2.8.x'
+          flutter-version: '3.x.x'
       - name: Get packages from pub
         run: flutter pub get
       - name: Build web app
-        run: flutter build web
+        run: flutter build web --web-renderer html
       - name: Publish to Github pages
         uses: Cecilapp/GitHub-Pages-deploy@2.0.1
         env:
