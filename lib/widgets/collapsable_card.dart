@@ -86,6 +86,7 @@ class _CollapsableCardState extends State<CollapsableCard> {
                   //height: getHeight(), TODO find a way to determine the correct size of the collapsed and the expanded state
                   child: Text(
                     widget.details,
+                    style: Theme.of(context).textTheme.bodySmall,
                     maxLines: _isExpanded ? 2 ^ 64 : widget.maxLines,
                     overflow: TextOverflow.ellipsis,
                   ),
