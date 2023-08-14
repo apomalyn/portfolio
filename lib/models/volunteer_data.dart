@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class VolunteerData {
   /// Path of the logo in the asset
   final String logoPath;

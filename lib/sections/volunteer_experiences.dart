@@ -7,7 +7,7 @@ import 'package:portfolio/widgets/collapsable_card.dart';
 
 class VolunteerExperiencesSection extends StatelessWidget {
   final TextStyle _titleOrangeStyle =
-      AppTheme.instance!.theme.textTheme.headline5!.copyWith(color: AppTheme.orangeRed);
+      AppTheme.instance!.theme.textTheme.headlineSmall!.copyWith(color: AppTheme.orangeRed);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class VolunteerExperiencesSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(AppIntl.of(context)!.volunteer_title,
-                  style: AppTheme.instance!.theme.textTheme.headline2),
+                  style: AppTheme.instance!.theme.textTheme.displayMedium),
               SizedBox(height: AppTheme.instance!.largeVerticalSpacing),
               Center(
                 child: Wrap(

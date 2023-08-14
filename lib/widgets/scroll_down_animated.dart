@@ -38,7 +38,7 @@ class _ScrollDownAnimatedState extends State<ScrollDownAnimated>
             Text(AppIntl
                 .of(context)!
                 .landing_scroll,
-                style: AppTheme.instance!.theme.textTheme.bodyText1!
+                style: AppTheme.instance!.theme.textTheme.bodyLarge!
                     .copyWith(color: AppTheme.white)),
             SizedBox(height: AppTheme.instance!.smallVerticalSpacing / 3),
             ConstrainedBox(
