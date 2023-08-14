@@ -15,7 +15,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '3.x.x'
+          flutter-version: '3.x'
       - name: Get packages from pub
         run: flutter pub get
       - name: Build web app
