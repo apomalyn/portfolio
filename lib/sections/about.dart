@@ -31,7 +31,7 @@ class AboutSection extends StatelessWidget {
                         Text(
                             "${AppIntl.of(context)!.firstname} ${AppIntl.of(context)!.lastname}.",
                             textAlign: TextAlign.start,
-                            style: AppTheme.instance!.theme.textTheme.headline2!
+                            style: AppTheme.instance!.theme.textTheme.displayMedium!
                                 .copyWith(color: AppTheme.white)),
                         SizedBox(
                             height: AppTheme.instance!.mediumVerticalSpacing),
@@ -41,7 +41,7 @@ class AboutSection extends StatelessWidget {
                               : size.width * 0.8,
                           child: Text(
                               AppIntl.of(context)!.about_first_paragraph,
-                              style: AppTheme.instance!.theme.textTheme.bodyText1!
+                              style: AppTheme.instance!.theme.textTheme.bodyLarge!
                                   .copyWith(color: AppTheme.white),
                               textAlign: TextAlign.left,
                               overflow: TextOverflow.fade),
@@ -58,7 +58,7 @@ class AboutSection extends StatelessWidget {
                             child: Text(
                                 AppIntl.of(context)!.about_second_paragraph,
                                 style: AppTheme
-                                    .instance!.theme.textTheme.bodyText1!
+                                    .instance!.theme.textTheme.bodyLarge!
                                     .copyWith(color: AppTheme.white),
                                 textAlign: TextAlign.left,
                                 overflow: TextOverflow.fade),

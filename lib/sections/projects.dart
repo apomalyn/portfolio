@@ -26,7 +26,7 @@ class ProjectsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(AppIntl.of(context)!.projects_title, style: AppTheme.instance!.theme.textTheme.headline2),
+            Text(AppIntl.of(context)!.projects_title, style: AppTheme.instance!.theme.textTheme.displayMedium),
             SizedBox(height: AppTheme.instance!.largeVerticalSpacing),
             Center(
               child: Wrap(
